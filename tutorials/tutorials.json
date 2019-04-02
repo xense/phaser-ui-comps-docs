@@ -1,0 +1,13 @@
+{
+  "AnimateBuild": {
+	"title": "Building UI with Adobe Animate",
+	"children": {
+	  "States": {
+		"title": "Understanding states"
+	  }
+	}
+  },
+  "code": {
+	"title": "Code examples"
+  }
+}

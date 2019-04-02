@@ -1,0 +1,33 @@
+{
+  "name": "phaser-ui-comps-docs",
+  "version": "1.0.0",
+  "description": "Phaser 3 UI components and jsfl builder",
+  "main": "src/index.js",
+  "scripts": {
+    "docs": "node node_modules/jsdoc/jsdoc.js -c jsdoc.conf.json -R ../phaser-ui-comps/README.md -u ./tutorials/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xense/phaser-ui-comps-docs.git"
+  },
+  "keywords": [
+    "phaser",
+    "phaser3",
+    "ui",
+    "jsfl",
+    "animate",
+    "components",
+    "fla",
+    "xfl"
+  ],
+  "author": "Anton 'Xense' Bystrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xense/phaser-ui-comps-docs/issues"
+  },
+  "homepage": "https://github.com/xense/phaser-ui-comps-docs#readme",
+  "devDependencies": {
+    "ink-docstrap": "^1.3.2",
+    "jsdoc": "^3.5.5"
+  }
+}

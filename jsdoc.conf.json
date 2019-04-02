@@ -1,0 +1,44 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": [
+            "jsdoc",
+            "closure"
+        ]
+    },
+    "source": {
+        "include": [
+            "../phaser-ui-comps/src/",
+            "../phaser-ui-comps/jsfl/"
+        ],
+        "includePattern": ".+\\.js(fl)?$",
+        "excludePattern": "docs",
+        "exclude": [
+            "index.js",
+            "UITestWindow.js"
+        ]
+    },
+    "plugins": [
+        "underscore",
+        "plugins/markdown"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+        "systemName": "Phaser 3 UI Components",
+        "footer": "Created by Anton Bystrov <anton.bystrov@gmail.com>",
+        "copyright": "2019 Anton Bystrov",
+        "navType": "vertical",
+        "theme": "cerulean",
+        "lineNums": true,
+        "collapseSymbols": true,
+        "inverseNav": false
+    },
+    "opts": {
+        "template": ".\\node_modules\\ink-docstrap\\template\\",
+        "encoding": "utf8",
+        "destination": "docs",
+        "recurse": true,
+        "private": false
+    }
+}
