@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIScrollBar</title>
+	<title>Phaser 3 UI Components Class: StateManager</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -93,21 +93,21 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIScrollBar</h1>
+	<h1 class="page-title">Class: StateManager</h1>
 <section>
 
 <header>
     
         <h2>
-        UIScrollBar
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.ComponentClip.html">.ComponentClip</a>.</span>
+        
+        StateManager
         </h2>
         
-            <div class="class-description"><p>Scroll bar component. can be vertical or horizontal <br>
-It have up and down buttons inside, draggable thumb button. <br>
-'dimensions' zone defines thumb drag bounds.</p>
-<p>default value range is 0 to 1, You can change it by setting
-min and max value. Also you can set value step, so value will always
-be stepped by it</p></div>
+            <div class="class-description"><p>For <a href="PhaserComps.ComponentClip.html"><code>ComponentClip</code></a>
+internal use only</p>
+<p>Shows or hides component view instances depending on which state is active.
+Helps to get current active components by keys.</p></div>
         
     
 </header>
@@ -119,7 +119,7 @@ be stepped by it</p></div>
         
 <hr>
 <dt>
-    <h4 class="name" id="UIScrollBar"><span class="type-signature"></span>new UIScrollBar(parent, key [, vertical])</h4>
+    <h4 class="name" id="StateManager"><span class="type-signature"></span>new StateManager(config)</h4>
     
     
 </dt>
@@ -146,11 +146,7 @@ be stepped by it</p></div>
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -162,13 +158,13 @@ be stepped by it</p></div>
 
         <tr>
             
-                <td class="name"><code>parent</code></td>
+                <td class="name"><code>config</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">UIComponentPrototype</span>
+<span class="param-type">Object</span>
 
 
 
@@ -176,98 +172,10 @@ be stepped by it</p></div>
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"><p>parent ComponentPrototype to find clip instance in</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>vertical</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>scroll bar behave like vertical or horizontal</p></td>
+            <td class="description last"><p>Main component states config object</p></td>
         </tr>
 
     
@@ -280,59 +188,6 @@ be stepped by it</p></div>
 <dl class="details">
     
 
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>current bar value, from min value to max, default is from 0 to 1</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
 	
 
 	
@@ -359,11 +214,6 @@ be stepped by it</p></div>
 
 
 
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
 	
 
 	
@@ -411,452 +261,7 @@ be stepped by it</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="onClipAppend"><span class="type-signature"></span>onClipAppend()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onClipProcess"><span class="type-signature"></span>onClipProcess()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onNextClick"><span class="type-signature">&lt;protected> </span>onNextClick()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onPrevClick"><span class="type-signature">&lt;protected> </span>onPrevClick()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setButtonStep"><span class="type-signature"></span>setButtonStep(val)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>val</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setValueBounds"><span class="type-signature"></span>setValueBounds(minValue, maxValue [, valueStep])</h4>
+    <h4 class="name" id="addComponent"><span class="type-signature"></span>addComponent(component, childId [, childKey])</h4>
     
     
 </dt>
@@ -887,8 +292,6 @@ be stepped by it</p></div>
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -899,13 +302,16 @@ be stepped by it</p></div>
 
         <tr>
             
-                <td class="name"><code>minValue</code></td>
+                <td class="name"><code>component</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
+|
+
+<span class="param-type">Phaser.GameObjects.GameObject</span>
 
 
 
@@ -923,25 +329,21 @@ be stepped by it</p></div>
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"></td>
+            <td class="description last"><p>component view instance, it may be text, image, sprite, or ComponentView instance</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>maxValue</code></td>
+                <td class="name"><code>childId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
 
@@ -959,25 +361,21 @@ be stepped by it</p></div>
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last"></td>
+            <td class="description last"><p>unique child id from component config</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>valueStep</code></td>
+                <td class="name"><code>childKey</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
 
@@ -997,14 +395,8 @@ be stepped by it</p></div>
             
 
             
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
 
-            <td class="description last"></td>
+            <td class="description last"><p>child key from component config</p></td>
         </tr>
 
     
@@ -1044,10 +436,317 @@ be stepped by it</p></div>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIScrollBar.js
-	</dd>
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getActiveComponentByKey"><span class="type-signature"></span>getActiveComponentByKey(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get component with provided key, if exists and is present in current state</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Component key to get</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">ComponentClip</span>
+|
+
+<span class="param-type">Phaser.GameObjects.Image</span>
+|
+
+<span class="param-type">Phaser.GameObjects.TileSprite</span>
+|
+
+<span class="param-type">Phaser.GameObjects.Text</span>
+|
+
+<span class="param-type">null</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setState"><span class="type-signature"></span>setState(stateId, force)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Setup state with provided stateId, if exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stateId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>state id to setup</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>if true, update state even if stateId was not changed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
 	
 
 	
@@ -1129,7 +828,7 @@ be stepped by it</p></div>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

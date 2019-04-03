@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIButtonDraggable</title>
+	<title>Phaser 3 UI Components Class: UIButtonSelect</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -93,16 +93,21 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIButtonDraggable</h1>
+	<h1 class="page-title">Class: UIButtonSelect</h1>
 <section>
 
 <header>
     
         <h2>
-        UIButtonDraggable
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
+        
+        UIButtonSelect
         </h2>
         
-            <div class="class-description"><p>Same as <a href="UIComponents.UIButton.html"><code>UIComponents.UIButton</code></a>, but also emits EVENT_DRAG with two arguments, horizontal and vertical movement delta</p></div>
+            <div class="class-description"><p>Checkbox-like button component prototype.
+Has states <code>up</code>, <code>over</code>, <code>down</code>, <code>disable</code>, <code>up_select</code>, <code>over_select</code>, <code>down_select</code>, <code>disable_select</code>,
+Emits EVENT_CLICK on click.
+When disabled, doesn't interact to mouse events and move to state <code>disable</code></p></div>
         
     
 </header>
@@ -114,7 +119,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="UIButtonDraggable"><span class="type-signature"></span>new UIButtonDraggable( [parent] [, key] [, labelText])</h4>
+    <h4 class="name" id="UIButtonSelect"><span class="type-signature"></span>new UIButtonSelect( [parent] [, key], labelText)</h4>
     
     
 </dt>
@@ -161,7 +166,7 @@
             <td class="type">
             
                 
-<span class="param-type">UIComponentPrototype</span>
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
 
 
 
@@ -182,7 +187,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>UIComponentPrototype instance to find clip inside</p></td>
         </tr>
 
     
@@ -216,7 +221,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>key to find clip inside parent</p></td>
         </tr>
 
     
@@ -239,9 +244,9 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
+                
+                    &lt;nullable><br>
                 
 
                 
@@ -334,6 +339,30 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>select</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>get/set switch</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 </dl>
@@ -367,11 +396,6 @@
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
-	</dd>
-	
 
 	
 
@@ -386,9 +410,7 @@
     
     <h5>Fires:</h5>
     <ul>
-        <li>event:EVENT_CLICK,</li>
-    
-        <li>event:EVENT_DRAG,</li>
+        <li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li>
     </ul>
     
 
@@ -413,7 +435,7 @@
 
 
     <ul>
-        <li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li>
+        <li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li>
     </ul>
 
 
@@ -468,7 +490,150 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="UIComponents.UIButton.html#_onClick">UIComponents.UIButton#_onClick</a>
+				<a href="PhaserComps.UIComponents.UIButton.html#_onClick">PhaserComps.UIComponents.UIButton#_onClick</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="PhaserComps.UIComponents.UIButton.html#_onClick">PhaserComps.UIComponents.UIButton#_onClick</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="appendClip"><span class="type-signature"></span>appendClip(clip)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Append a instance to this to control it. State setup will be processed immediately.<br>
+Use only for root instance, child instances will be appended automatically depending on state of this.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>clip</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ComponentView instance to append</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#appendClip">PhaserComps.UIComponents.UIComponentPrototype#appendClip</a>
 			</li>
 		</ul>
 	</dd>
@@ -495,11 +660,6 @@
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
 
 	
 
@@ -528,436 +688,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="_onDrag"><span class="type-signature">&lt;protected> </span>_onDrag(pointer, gameObject, dragX, dragY)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>_dragZone <code>drag</code> event callback</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>pointer</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>gameObject</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Phaser.GameObjects.GameObject</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>dragX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>dragY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onDragStart"><span class="type-signature">&lt;protected> </span>_onDragStart(pointer, gameObject)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>_dragZone <code>dragstart</code> event callback</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>pointer</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>gameObject</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Phaser.GameObjects.GameObject</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_setupInteractive"><span class="type-signature"></span>_setupInteractive()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getStateId"><span class="type-signature"></span>getStateId()</h4>
+    <h4 class="name" id="destroy"><span class="type-signature">&lt;protected> </span>destroy()</h4>
     
     
 </dt>
@@ -985,7 +716,7 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="UIComponents.UIButton.html#getStateId">UIComponents.UIButton#getStateId</a>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#destroy">PhaserComps.UIComponents.UIComponentPrototype#destroy</a>
 			</li>
 		</ul>
 	</dd>
@@ -1012,10 +743,191 @@
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="doState"><span class="type-signature">&lt;protected> </span>doState()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Call doState to setup new state, id is provided by <a href="PhaserComps.UIComponents.UIComponentPrototype.html#getStateId"><code>getStateId</code></a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#doState">PhaserComps.UIComponents.UIComponentPrototype#doState</a>
+			</li>
+		</ul>
 	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="PhaserComps.UIComponents.UIButtonSelect.html#getStateId">#getStateId</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getStateId"><span class="type-signature">&lt;protected> </span>getStateId()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Current state id, used by <a href="PhaserComps.UIComponents.UIComponentPrototype.html#doState"><code>doState</code></a> method</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#getStateId">PhaserComps.UIComponents.UIComponentPrototype#getStateId</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="PhaserComps.UIComponents.UIButton.html#getStateId">PhaserComps.UIComponents.UIButton#getStateId</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
 	
 
 	
@@ -1065,183 +977,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="onClipAppend"><span class="type-signature"></span>onClipAppend()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIComponents.UIButton.html#onClipAppend">UIComponents.UIButton#onClipAppend</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onClipRemove"><span class="type-signature"></span>onClipRemove()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIComponents.UIButton.html#onClipRemove">UIComponents.UIButton#onClipRemove</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setDragBounds"><span class="type-signature"></span>setDragBounds(minX, minY, maxX, maxY)</h4>
+    <h4 class="name" id="getText"><span class="type-signature"></span>getText(key)</h4>
     
     
 </dt>
@@ -1249,7 +985,7 @@
 
     
     <div class="description">
-        <p>Set clip drag bounds</p>
+        <p>Returns saved text by key, if it was set previously</p>
     </div>
     
 
@@ -1284,13 +1020,13 @@
 
         <tr>
             
-                <td class="name"><code>minX</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
 
@@ -1301,79 +1037,7 @@
 
             
 
-            <td class="description last"><p>left drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>minY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>top drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>maxX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>right drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>maxY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>bottom drag bound</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -1391,32 +1055,36 @@
 	
 
 	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#getText">PhaserComps.UIComponents.UIComponentPrototype#getText</a>
+			</li>
+		</ul>
 	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
 	
 
 	
@@ -1438,38 +1106,59 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>text value</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Array.&lt;String></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
 
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        <dl>
-                
+        
+            
 <hr>
-<dt class="name" id=".DragBounds">
-    <h4 id=".DragBounds">DragBounds</h4>
-
+<dt>
+    <h4 class="name" id="onClipAppend"><span class="type-signature">&lt;protected> </span>onClipAppend(clip)</h4>
+    
     
 </dt>
 <dd>
-    
 
     
 
     
-<dl class="details">
+
     
 
-    <h5 class="subsection-title">Properties:</h5>
+    
+    
+        <h5>Parameters:</h5>
+        
 
-    <dl>
-
-<table class="props table table-striped">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1491,13 +1180,13 @@
 
         <tr>
             
-                <td class="name"><code>minX</code></td>
+                <td class="name"><code>clip</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
 
 
 
@@ -1508,86 +1197,17 @@
 
             
 
-            <td class="description last"><p>left drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>minY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>top drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>maxX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>right drag bound</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>maxY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>bottom drag bound</p></td>
+            <td class="description last"></td>
         </tr>
 
     
     </tbody>
 </table>
-</dl>
 
+    
+
+    
+<dl class="details">
     
 
 	
@@ -1595,34 +1215,38 @@
 	
 
 	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipAppend">PhaserComps.UIComponents.UIComponentPrototype#onClipAppend</a>
+			</li>
+		</ul>
 	</dd>
 	
 
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
 	
 
 	
@@ -1630,21 +1254,27 @@
 	
 </dl>
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
 
-            </dl>
-    
-
-    
-        <h3 class="subsection-title">Events</h3>
-
-        <dl>
+        
             
 <hr>
 <dt>
-    <h4 class="name" id=".event:EVENT_DRAG">EVENT_DRAG</h4>
+    <h4 class="name" id="onClipProcess"><span class="type-signature">&lt;protected> </span>onClipProcess()</h4>
     
     
 </dt>
@@ -1652,7 +1282,305 @@
 
     
     <div class="description">
-        <p>Emitted on drag move.</p>
+        <p>Override this, if you want to do something, when state or clip changes.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipProcess">PhaserComps.UIComponents.UIComponentPrototype#onClipProcess</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onClipRemove"><span class="type-signature">&lt;protected> </span>onClipRemove(clip)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>clip</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipRemove">PhaserComps.UIComponents.UIComponentPrototype#onClipRemove</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeClip"><span class="type-signature">&lt;protected> </span>removeClip()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#removeClip">PhaserComps.UIComponents.UIComponentPrototype#removeClip</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setText"><span class="type-signature"></span>setText(key, text)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set text value to the textfield with provided key.
+Text value is saved in the component's instance dictionary and will be set to the textField on every state change</p>
     </div>
     
 
@@ -1687,13 +1615,13 @@
 
         <tr>
             
-                <td class="name"><code>x</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
 
@@ -1704,20 +1632,23 @@
 
             
 
-            <td class="description last"><p>horizontal drag movement (from drag start)</p></td>
+            <td class="description last"><p>TextField key</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>y</code></td>
+                <td class="name"><code>text</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Array.&lt;String></span>
 
 
 
@@ -1728,7 +1659,7 @@
 
             
 
-            <td class="description last"><p>vertical drag movement (from drag start)</p></td>
+            <td class="description last"><p>text string</p></td>
         </tr>
 
     
@@ -1746,32 +1677,36 @@
 	
 
 	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonDraggable.js
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#setText">PhaserComps.UIComponents.UIComponentPrototype#setText</a>
+			</li>
+		</ul>
 	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
 	
 
 	
@@ -1798,6 +1733,10 @@
 </dd>
 
         </dl>
+    
+
+    
+
     
 </article>
 
@@ -1849,7 +1788,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

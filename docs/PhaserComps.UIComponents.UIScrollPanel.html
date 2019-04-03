@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIButtonSelect</title>
+	<title>Phaser 3 UI Components Class: UIScrollPanel</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -93,19 +93,21 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIButtonSelect</h1>
+	<h1 class="page-title">Class: UIScrollPanel</h1>
 <section>
 
 <header>
     
         <h2>
-        UIButtonSelect
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
+        
+        UIScrollPanel
         </h2>
         
-            <div class="class-description"><p>Checkbox-like button component prototype.
-Has states <code>up</code>, <code>over</code>, <code>down</code>, <code>disable</code>, <code>up_select</code>, <code>over_select</code>, <code>down_select</code>, <code>disable_select</code>,
-Emits EVENT_CLICK on click.
-When disabled, doesn't interact to mouse events and move to state <code>disable</code></p></div>
+            <div class="class-description"><p>Scrolling panel with scrollbar applied to it.
+First parameter is container, where this should find the panel, scroll bar and dimensions instances
+UIScrollBar instance created inside with a provided <code>scrollBarKey</code> <br><br></p>
+<p><strong>Warning! This component doesn't extend UIComponent.ComponentPrototype</strong></p></div>
         
     
 </header>
@@ -117,7 +119,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
         
 <hr>
 <dt>
-    <h4 class="name" id="UIButtonSelect"><span class="type-signature"></span>new UIButtonSelect(parent, key, labelText)</h4>
+    <h4 class="name" id="UIScrollPanel"><span class="type-signature"></span>new UIScrollPanel(container, panelKey, scrollBarKey, dimensionsKey [, vertical])</h4>
     
     
 </dt>
@@ -148,6 +150,8 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -158,13 +162,13 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
         <tr>
             
-                <td class="name"><code>parent</code></td>
+                <td class="name"><code>container</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">UIComponentPrototype</span>
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
 
 
 
@@ -182,6 +186,10 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last"></td>
         </tr>
@@ -190,7 +198,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>panelKey</code></td>
             
 
             <td class="type">
@@ -214,6 +222,10 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last"></td>
         </tr>
@@ -222,7 +234,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
         <tr>
             
-                <td class="name"><code>labelText</code></td>
+                <td class="name"><code>scrollBarKey</code></td>
             
 
             <td class="type">
@@ -240,13 +252,91 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
                 
 
                 
-                    &lt;nullable><br>
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dimensionsKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
                 
 
                 
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>vertical</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
             
 
             <td class="description last"></td>
@@ -255,6 +345,98 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
     
     </tbody>
 </table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id=".ScrollLimitsObject">
+    <h4 id=".ScrollLimitsObject">ScrollLimitsObject</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Object is generated automatically on container's clip update, by the <code>dimensions</code> clip</p>
+    </div>
+    
 
     
 
@@ -288,13 +470,13 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
         <tr>
             
-                <td class="name"><code>enable</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">Number</span>
 
 
 
@@ -305,20 +487,20 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
             
 
-            <td class="description last"><p>activate/deactivate button interaction. if false, button state is set to <code>disable</code></p></td>
+            <td class="description last"><p>Start x position of the container. Used, if panel is horizontal</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>label</code></td>
+                <td class="name"><code>y</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Number</span>
 
 
 
@@ -329,20 +511,20 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
             
 
-            <td class="description last"><p>get/set button label text</p></td>
+            <td class="description last"><p>Start x position of the container. Used, if panel is vertical</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>select</code></td>
+                <td class="name"><code>len</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">Number</span>
 
 
 
@@ -353,7 +535,8 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
             
 
-            <td class="description last"><p>get/set switch</p></td>
+            <td class="description last"><p>Scroll distance of the container. On scroll down/right,
+x or y position will be subtracted by <code>len</code> multiplied by scrollbar value</p></td>
         </tr>
 
     
@@ -390,11 +573,6 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonSelect.js
-	</dd>
-	
 
 	
 
@@ -403,677 +581,11 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 	
 </dl>
 
-
-    
-
-    
-    <h5>Fires:</h5>
-    <ul>
-        <li>event:EVENT_CLICK</li>
-    </ul>
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
 
-    
-    </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="UIButton.html">UIButton</a></li>
-    </ul>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onClick"><span class="type-signature"></span>_onClick()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonSelect.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerDown"><span class="type-signature">&lt;protected> </span>_onPointerDown()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerDown">UIButton#_onPointerDown</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerOut"><span class="type-signature">&lt;protected> </span>_onPointerOut()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerOut">UIButton#_onPointerOut</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerOver"><span class="type-signature">&lt;protected> </span>_onPointerOver()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerOver">UIButton#_onPointerOver</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerUp"><span class="type-signature">&lt;protected> </span>_onPointerUp()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerUp">UIButton#_onPointerUp</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="destroy"><span class="type-signature">&lt;protected> </span>destroy()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#destroy">UIButton#destroy</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getStateId"><span class="type-signature"></span>getStateId()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonSelect.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        </dl>
-    
-
+            </dl>
     
 
     
@@ -1127,7 +639,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

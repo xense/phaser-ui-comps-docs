@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -99,11 +99,18 @@
 <header>
     
         <h2>
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a>.</span>
+        
         ComponentClip
         </h2>
         
-            <div class="class-description"><p>Component view group builds itself with given jfsl-generated config object;
-Supports state switching. Best if controlled by ComponentPrototype instance.</p></div>
+            <div class="class-description"><p>Component clip is a group of Phaser GameObjects and child ComponentClips.
+Builds itself with provided jsfl-generated config object.</p>
+<p>Clip supports state switching. Best if controlled by
+<a href="PhaserComps.UIComponents.UIComponentPrototype.html"><code>UIComponentPrototype</code></a> instance</p>
+<p><em>Note! do not change <code>x</code>, <code>y</code>, <code>scaleX</code>, <code>scaleY</code>, <code>angle</code>, <code>alpha</code>, <code>visible</code> properties of clip instance.</em></p>
+<p><em>If you need to move, scale, rotate, change alpha and visibility of the clip group, use</em>
+<em><code>groupX</code>, <code>groupY</code>, <code>groupScaleX</code>, <code>groupScaleY</code>, <code>groupAngle</code>, <code>groupAlpha</code>, <code>groupVisible</code> properties</em></p></div>
         
     
 </header>
@@ -115,7 +122,7 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
         
 <hr>
 <dt>
-    <h4 class="name" id="ComponentClip"><span class="type-signature"></span>new ComponentClip(scene, config, textures, isChildComponent)</h4>
+    <h4 class="name" id="ComponentClip"><span class="type-signature"></span>new ComponentClip(scene, config, textures [, isChildComponent])</h4>
     
     
 </dt>
@@ -145,6 +152,8 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
         <th>Argument</th>
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -180,6 +189,10 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last"><p>Phaser scene to create component at</p></td>
         </tr>
@@ -212,8 +225,12 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"></td>
+            <td class="description last"><p>jsfl-generated config object</p></td>
         </tr>
 
     
@@ -244,6 +261,10 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last"><p>Array of texture names, where component should find its texture frames</p></td>
         </tr>
@@ -268,9 +289,9 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             
                 <td class="attributes">
                 
-
+                    &lt;optional><br>
                 
-                    &lt;nullable><br>
+
                 
 
                 
@@ -278,8 +299,716 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             
 
             
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
 
-            <td class="description last"></td>
+            <td class="description last"><p>used internally to build child component clips recursively</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>groupX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group position x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group position x</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupAlpha</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group alpha</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupScaleX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group scaleX</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupScaleY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group scaleY</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group angle in degrees.
+Note, that every group child will be rotated around its own origin</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupVisible</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>clip group visibility flag</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to move clip manually, use <code>groupX</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to move clip manually, use <code>groupY</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scaleX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to scale clip manually, use <code>groupScaleX</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scaleY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to scale clip manually, use <code>groupScaleY</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>alpha</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to change clip alpha manually, use <code>groupAlpha</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>angle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to rotate clip manually, use <code>groupAngle</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>visible</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p><strong>only for private usage</strong>, if you want to switch clip visibility manually,
+use <code>groupVisible</code></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="PhaserComps.ComponentClip.State.html">State</a></dt>
+            <dd></dd>
+        
+            <dt><a href="PhaserComps.ComponentClip.StateManager.html">StateManager</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="getChildClip"><span class="type-signature"></span>getChildClip(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns current active component child view instance</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>child key</p></td>
         </tr>
 
     
@@ -319,10 +1048,361 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/clip/ComponentClip.js
-	</dd>
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
+|
+
+<span class="param-type">Phaser.GameObjects.GameObject</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getChildText"><span class="type-signature"></span>getChildText(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>returns current active component child text instance</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>child text field key</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Phaser.GameObjects.Text</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setState"><span class="type-signature"></span>setState(stateId [, force])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Switch component view to specified stateId, if such stateId exists.
+Do not use it manually, if you are using ComponentPrototype to control the view</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stateId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>state id to switch to</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>if true, state will be setup again even if stateId was not changed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
 	
 
 	
@@ -348,42 +1428,7 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
     
 </dd>
 
-    
-    </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>Phaser.GameObjects.Group</li>
-    </ul>
-
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="ComponentClip.State.html">State</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ComponentClip.StateManager.html">StateManager</a></dt>
-            <dd></dd>
         </dl>
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -398,6 +1443,10 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
     
 </dt>
 <dd>
+    
+    <div class="description">
+        <p>Component Config object, generated by jsfl exporter</p>
+    </div>
     
 
     
@@ -474,7 +1523,8 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
                 </td>
             
 
-            <td class="description last"><p>supported types are image, component, text, tileSprite, polygon, hitZone</p></td>
+            <td class="description last"><p>supported types are
+<code>image</code>, <code>component</code>, <code>text</code>, <code>tileSprite</code>, <code>polygon</code>, <code>zone</code></p></td>
         </tr>
 
     
@@ -487,7 +1537,7 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;ComponentConfig></span>
+<span class="param-type">Array.&lt;<a href="PhaserComps.ComponentClip.html#.ComponentConfig">PhaserComps.ComponentClip.ComponentConfig</a>></span>
 
 
 
@@ -546,7 +1596,7 @@ Supports state switching. Best if controlled by ComponentPrototype instance.</p>
                 </td>
             
 
-            <td class="description last"><p>unique component id, used by <a href="StateManager.html"><code>StateManager</code></a></p></td>
+            <td class="description last"><p>unique component id, used by <code>StateManager</code></p></td>
         </tr>
 
     
@@ -668,7 +1718,7 @@ Must be unique inside one state</p></td>
             <td class="type">
             
                 
-<span class="param-type">Object.&lt;String, StateConfig></span>
+<span class="param-type">Object.&lt;String, <a href="PhaserComps.ComponentClip.html#.StateConfig">PhaserComps.ComponentClip.StateConfig</a>></span>
 
 
 
@@ -1140,11 +2190,6 @@ Only for <code>polygon</code> type</p></td>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/clip/ComponentClip.js
-	</dd>
-	
 
 	
 
@@ -1166,6 +2211,10 @@ Only for <code>polygon</code> type</p></td>
     
 </dt>
 <dd>
+    
+    <div class="description">
+        <p>Component state config object, generated by jsfl exporter</p>
+    </div>
     
 
     
@@ -1473,11 +2522,6 @@ Only for <code>polygon</code> type</p></td>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/clip/ComponentClip.js
-	</dd>
-	
 
 	
 
@@ -1544,7 +2588,7 @@ Only for <code>polygon</code> type</p></td>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

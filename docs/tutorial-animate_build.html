@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Tutorial: animate_build</title>
+	<title>Phaser 3 UI Components Tutorial: Building UI with Adobe Animate</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -95,26 +95,34 @@
 
 <header>
     
+    <ul>
+        <li><a href="tutorial-states.html">Understanding states</a></li>
+    </ul>
+    
 
-    <h2>animate_build</h2>
+    <h2>Building UI with Adobe Animate</h2>
 </header>
 
 <article>
-    <h2>Using <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a> to build UI for <a href="http://phaser.io/">Phaser 3</a></h2><p>First steps</p>
+    <p><h3>Using <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a> 
+to build UI for <a href="http://phaser.io/">Phaser 3</a><h3></p>
+<h4>First steps</h4>
+
 <ul>
 <li><p>Create an Animate document of type <strong>HTML5 Canvas</strong> or <strong>ActionScript</strong>.</p>
 </li>
 <li><p>Create folder in the document library, where you will keep all your bitmaps.</p>
 </li>
 </ul>
-<p><em>Later, when you export your UI, all images will be exported with same paths as they were in the library, 
-so you can easily get them to texture atlases.</em>  </p>
-<p><em>Also, it will be useful to create subfolders in the bitmaps folder, 
-if you want to create some separate texture atlases</em></p>
+<p>Later, when you export your UI, all images will be exported with same 
+paths as they were in the library, so you can easily get them to texture atlases.  </p>
+<p>Also, it will be useful to create subfolders in the bitmaps folder, 
+if you want to create some separate texture atlases</p>
 <ul>
-<li>Create your UI movieclip symbol and set <em>linkage name</em> to it.</li>
+<li>Create your UI movieclip symbol and set <em>linkage name</em> to it, i.e. <code>my_window</code></li>
 </ul>
-<p><em>JSFL script exports all library items, that have linkage name to JSON files with that name</em></p>
+<p>JSFL script exports all library items, that have linkage name 
+to JSON files with that name</p>
 <ul>
 <li>OK, now you are ready to build your UI components, windows and whatever.</li>
 </ul>
@@ -161,7 +169,7 @@ if you want to create some separate texture atlases</em></p>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

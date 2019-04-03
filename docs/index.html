@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -114,20 +114,26 @@
 
 
     <section class="readme-section">
-        <article><h2>﻿Phaser 3 UI Components, built by Adobe Animate</h2><p>Build your UI in <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a>, 
+        <article><h2>﻿Phaser 3 UI Components, built by Adobe Animate</h2><h3>What is it?</h3>
+Build your UI in <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a>, 
 export to JSON and bitmaps with provided 
 <a href="https://github.com/xense/phaser-ui-comps/blob/master/jsfl/ExportToPhaser.jsfl">JSFL script</a> 
-, and you can forget about lots of positioning magic numbers in your code.</p>
-<p><code>ComponentClip</code> build itself with provided JSON and atlases, 
+, and you can forget about lots of positioning magic numbers in your code.
+
+<code>ComponentClip</code> build itself with provided JSON and atlases, 
 and <code>ComponentPrototype</code> Will help to control them, switch states, 
-listen to click, drag and other events.</p>
-<p>In addition, <code>ComponentPrototype</code> and it's children classes don't mind, 
+listen to click, drag and other events.
+
+In addition, <code>ComponentPrototype</code> and it's children classes don't mind, 
 if they have a real clip instance in current state or at all,
-so nothing bad happens, if you remove some button in your window in Animate</p>
-<p>All bitmaps are exported to png files with the same folder structure 
+so nothing bad happens, for example, if you remove some button instance in your window in 
+Animate document and keep it's <code>ComponentPrototype</code> instance.
+
+All bitmaps are exported to png files with the same folder structure 
 as in the Animate document library. Pack them to atlases using
-<a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.</p>
-<h3>Links</h3>
+<a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.
+
+<h3>Where and how to use?</h3>
 <h4><strong>Framework main repo</strong></h4>
 <a href="https://github.com/xense/phaser-ui-comps">https://github.com/xense/phaser-ui-comps</a><br>
 
@@ -143,9 +149,9 @@ as in the Animate document library. Pack them to atlases using
 <em>To run JSFL script in Animate select <code>Commands &gt; Run Command</code>, 
 navigate to the script, and click Open.</em>
 
-<h3>Installation</h3>
+<h3>How to install?</h3>
 
-<p>To install the latest version on 
+<p>To install the latest version from 
 <a href="https://www.npmjs.com">npm</a> 
 locally and save it in your <code>package.json</code> file:</p>
 <pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps </code></pre><p>Or you can download minified version from 
@@ -153,13 +159,14 @@ locally and save it in your <code>package.json</code> file:</p>
 <p><strong><em>Note!</em></strong>
 <em>PhaserComps uses <a href="https://underscorejs.org/">underscore.js</a>
 There are two builds in the /dist folder, 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-jsfl-with-underscore.min.js">one</a> 
+<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps-with-underscore.min.js">one</a> 
 with underscore included and 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-jsfl.min.js">other</a> 
+<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps.min.js">other</a> 
 without it, so you need to load it before loading PhaserComps</em> </p>
 <h3>Simple usage</h3>
 
-<pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = 'comp-config';
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;path/to/script/phaser.js&quot;>&lt;/script>
+&lt;script src=&quot;path/to/script/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = 'comp-config';
 const TEXTURE_CONFIG = 'my_texture';
 
 
@@ -241,7 +248,7 @@ function create() {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

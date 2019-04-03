@@ -1,13 +1,16 @@
 {
-  "AnimateBuild": {
+  "animate_build": {
 	"title": "Building UI with Adobe Animate",
 	"children": {
-	  "States": {
+	  "states": {
 		"title": "Understanding states"
 	  }
 	}
   },
   "code": {
 	"title": "Code examples"
+  },
+  "example": {
+	"title": "Showcase"
   }
 }

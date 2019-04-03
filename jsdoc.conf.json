@@ -33,7 +33,8 @@
         "lineNums": true,
         "collapseSymbols": true,
         "inverseNav": false,
-        "outputSourcePath": true
+	  	"outputSourceFiles": false,
+        "outputSourcePath": false
     },
     "opts": {
         "template": ".\\node_modules\\ink-docstrap\\template\\",

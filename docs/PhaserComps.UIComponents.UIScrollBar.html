@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIButtonRadio</title>
+	<title>Phaser 3 UI Components Class: UIScrollBar</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,21 +40,21 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="ComponentClip.html">ComponentClip</a></li><li><a href="ComponentClip.State.html">ComponentClip.State</a></li><li><a href="ComponentClip.StateManager.html">ComponentClip.StateManager</a></li><li><a href="UIComponents.UIButton.html">UIComponents.UIButton</a></li><li><a href="UIComponents.UIButtonDraggable.html">UIComponents.UIButtonDraggable</a></li><li><a href="UIComponents.UIButtonRadio.html">UIComponents.UIButtonRadio</a></li><li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li><li><a href="UIComponents.UIComponentPrototype.html">UIComponents.UIComponentPrototype</a></li><li><a href="UIComponents.UIScrollBar.html">UIComponents.UIScrollBar</a></li><li><a href="UIComponents.UIScrollPanel.html">UIComponents.UIScrollPanel</a></li>
+					<li><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></li><li><a href="PhaserComps.ComponentClip.State.html">PhaserComps.ComponentClip.State</a></li><li><a href="PhaserComps.ComponentClip.StateManager.html">PhaserComps.ComponentClip.StateManager</a></li><li><a href="PhaserComps.Plugin.html">PhaserComps.Plugin</a></li><li><a href="PhaserComps.UIComponents.UIButton.html">PhaserComps.UIComponents.UIButton</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html">PhaserComps.UIComponents.UIButtonDraggable</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html">PhaserComps.UIComponents.UIButtonRadio</a></li><li><a href="PhaserComps.UIComponents.UIButtonSelect.html">PhaserComps.UIComponents.UIButtonSelect</a></li><li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html">PhaserComps.UIComponents.UIScrollBar</a></li><li><a href="PhaserComps.UIComponents.UIScrollPanel.html">PhaserComps.UIComponents.UIScrollPanel</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="UIComponents.UIButton.html#.event:EVENT_CLICK">UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li>
+					<li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li><li><a href="PhaserComps.UIComponents.UIButtonDraggable.html#.event:EVENT_DRAG">PhaserComps.UIComponents.UIButtonDraggable.event:EVENT_DRAG</a></li><li><a href="PhaserComps.UIComponents.UIButtonRadio.html#.event:EVENT_SELECT">PhaserComps.UIComponents.UIButtonRadio.event:EVENT_SELECT</a></li><li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="tutorial-animate_build.html">animate_build</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-states.html">states</a></li>
+					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
 				</ul>
 			</li>
 			
@@ -93,19 +93,23 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIButtonRadio</h1>
+	<h1 class="page-title">Class: UIScrollBar</h1>
 <section>
 
 <header>
     
         <h2>
-        UIButtonRadio
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
+        
+        UIScrollBar
         </h2>
         
-            <div class="class-description"><p>Radio button.
-Several radio buttons can be grouped by appending them to the first button in the group,
-You can do it via passing first button to <code>appendTo</code> constructor argument of other instances,
-or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRadio</code></a> method.</p></div>
+            <div class="class-description"><p>Scroll bar component. can be vertical or horizontal <br>
+It have up and down buttons inside, draggable thumb button. <br>
+'dimensions' zone defines thumb drag bounds.</p>
+<p>default value range is 0 to 1, You can change it by setting
+min and max value. Also you can set value step, so value will always
+be stepped by it</p></div>
         
     
 </header>
@@ -117,7 +121,7 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
         
 <hr>
 <dt>
-    <h4 class="name" id="UIButtonRadio"><span class="type-signature"></span>new UIButtonRadio(parent [, key] [, labelText] [, value] [, appendTo])</h4>
+    <h4 class="name" id="UIScrollBar"><span class="type-signature"></span>new UIScrollBar( [parent] [, key] [, vertical])</h4>
     
     
 </dt>
@@ -148,6 +152,8 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -164,7 +170,7 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             <td class="type">
             
                 
-<span class="param-type">UIComponentPrototype</span>
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
 
 
 
@@ -174,9 +180,9 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             
                 <td class="attributes">
                 
-
+                    &lt;optional><br>
                 
-                    &lt;nullable><br>
+
                 
 
                 
@@ -184,8 +190,12 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>Parent component to find clip instance in</p></td>
+            <td class="description last"><p>UIComponentPrototype instance to find clip inside</p></td>
         </tr>
 
     
@@ -218,21 +228,25 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>this instance clip key to find the clip</p></td>
+            <td class="description last"><p>key to find clip inside parent</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>labelText</code></td>
+                <td class="name"><code>vertical</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Boolean</span>
 
 
 
@@ -252,10 +266,48 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             
 
             
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
 
-            <td class="description last"><p>Button label text</p></td>
+            <td class="description last"><p>scroll bar behave like vertical or horizontal</p></td>
         </tr>
 
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
@@ -266,7 +318,7 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             <td class="type">
             
                 
-<span class="param-type">*</span>
+<span class="param-type">Number</span>
 
 
 
@@ -274,35 +326,517 @@ or use <a href="UIComponents.UIButtonRadio.html#appendToRadio"><code>appendToRad
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>Any value, applied to current radio button instance.
-Use it to find out, what is the current selected value in the group,
-or select radio by provided value</p></td>
+            <td class="description last"><p>current bar value, from min value to max, default is from 0 to 1</p></td>
         </tr>
 
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>Fires:</h5>
+    <ul>
+        <li><a href="PhaserComps.UIComponents.UIScrollBar.html#.event:EVENT_CHANGE">PhaserComps.UIComponents.UIScrollBar.event:EVENT_CHANGE</a></li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="_onZoneDown"><span class="type-signature"></span>_onZoneDown()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Zone around scrollbar thumb click handler</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onClipAppend"><span class="type-signature"></span>onClipAppend()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onClipProcess"><span class="type-signature"></span>onClipProcess()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onNextClick"><span class="type-signature">&lt;protected> </span>onNextClick()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onPrevClick"><span class="type-signature">&lt;protected> </span>onPrevClick()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setButtonStep"><span class="type-signature"></span>setButtonStep(val)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>appendTo</code></td>
+                <td class="name"><code>val</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="UIButtonRadio.html">UIButtonRadio</a></span>
+<span class="param-type">Number</span>
 
 
 
@@ -310,21 +844,10 @@ or select radio by provided value</p></td>
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>If specified, this instance will be appended
-to provided radio group immediately</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -364,11 +887,6 @@ to provided radio group immediately</p></td>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonRadio.js
-	</dd>
-	
 
 	
 
@@ -380,11 +898,6 @@ to provided radio group immediately</p></td>
 
     
 
-    
-    <h5>Fires:</h5>
-    <ul>
-        <li>event:EVENT_SELECT</li>
-    </ul>
     
 
     
@@ -398,49 +911,168 @@ to provided radio group immediately</p></td>
     
 </dd>
 
-    
-    </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
         
-
-
-    <ul>
-        <li>UIButtonSelect</li>
-    
-        <li><a href="UIComponents.UIButtonSelect.html">UIComponents.UIButtonSelect</a></li>
-    </ul>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
             
 <hr>
-<dt class="name" id=".EVENT_SELECT">
-    <h4 id=".EVENT_SELECT"><span class="type-signature">&lt;static> </span>EVENT_SELECT<span class="type-signature"></span></h4>
-
+<dt>
+    <h4 class="name" id="setValueBounds"><span class="type-signature"></span>setValueBounds(minValue, maxValue [, valueStep])</h4>
+    
     
 </dt>
 <dd>
+
     
     <div class="description">
-        <p>Fired when some radio button of the group is selected</p>
+        <p>Setup scroll bar value bounds and value step</p>
     </div>
     
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>minimum value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>maximum value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>valueStep</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last"><p>value change step</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
     
 
@@ -475,11 +1107,6 @@ to provided radio group immediately</p></td>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonRadio.js
-	</dd>
-	
 
 	
 
@@ -488,6 +1115,18 @@ to provided radio group immediately</p></td>
 	
 </dl>
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
@@ -496,458 +1135,15 @@ to provided radio group immediately</p></td>
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+
+    
+        <h3 class="subsection-title">Events</h3>
 
         <dl>
             
 <hr>
 <dt>
-    <h4 class="name" id="_onClick"><span class="type-signature"></span>_onClick()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIComponents.UIButtonSelect.html#_onClick">UIComponents.UIButtonSelect#_onClick</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
-        <a href="UIComponents.UIButtonSelect.html#_onClick">UIComponents.UIButtonSelect#_onClick</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonSelect.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerDown"><span class="type-signature">&lt;protected> </span>_onPointerDown()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerDown">UIButton#_onPointerDown</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerOut"><span class="type-signature">&lt;protected> </span>_onPointerOut()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerOut">UIButton#_onPointerOut</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerOver"><span class="type-signature">&lt;protected> </span>_onPointerOver()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerOver">UIButton#_onPointerOver</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="_onPointerUp"><span class="type-signature">&lt;protected> </span>_onPointerUp()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#_onPointerUp">UIButton#_onPointerUp</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="appendToRadio"><span class="type-signature"></span>appendToRadio(radio)</h4>
+    <h4 class="name" id=".event:EVENT_CHANGE">EVENT_CHANGE</h4>
     
     
 </dt>
@@ -955,7 +1151,7 @@ to provided radio group immediately</p></td>
 
     
     <div class="description">
-        <p>Append this radio instance to provided radio sibling ring</p>
+        <p>Emitted on scroll bar value change.</p>
     </div>
     
 
@@ -990,13 +1186,13 @@ to provided radio group immediately</p></td>
 
         <tr>
             
-                <td class="name"><code>radio</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="UIButtonRadio.html">UIButtonRadio</a></span>
+<span class="param-type">Number</span>
 
 
 
@@ -1007,7 +1203,7 @@ to provided radio group immediately</p></td>
 
             
 
-            <td class="description last"><p>radio button to append to sibling ring</p></td>
+            <td class="description last"><p>current scrollbar value</p></td>
         </tr>
 
     
@@ -1047,11 +1243,6 @@ to provided radio group immediately</p></td>
 
 
 	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonRadio.js
-	</dd>
-	
 
 	
 
@@ -1072,211 +1263,11 @@ to provided radio group immediately</p></td>
     
 
     
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="destroy"><span class="type-signature">&lt;protected> </span>destroy()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIButton.html#destroy">UIButton#destroy</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButton.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getStateId"><span class="type-signature"></span>getStateId()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="UIComponents.UIButtonSelect.html#getStateId">UIComponents.UIButtonSelect#getStateId</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		src/components/UIButtonSelect.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
 
         </dl>
-    
-
-    
-
     
 </article>
 
@@ -1328,7 +1319,7 @@ to provided radio group immediately</p></td>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T14:22:27+03:00
+		on 2019-04-03T18:34:42+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
