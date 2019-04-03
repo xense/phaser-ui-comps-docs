@@ -32,7 +32,8 @@
         "theme": "cerulean",
         "lineNums": true,
         "collapseSymbols": true,
-        "inverseNav": false
+        "inverseNav": false,
+        "outputSourcePath": true
     },
     "opts": {
         "template": ".\\node_modules\\ink-docstrap\\template\\",

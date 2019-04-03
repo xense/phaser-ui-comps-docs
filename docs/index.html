@@ -115,9 +115,9 @@
 
     <section class="readme-section">
         <article><h2>﻿Phaser 3 UI Components, built by Adobe Animate</h2><p>Build your UI in <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a>, 
-export to JSON and mutliatlases with provided 
-<a href="https://github.com/xense/phaser-ui-comps/jsfl/ExportToPhaser.jsfl">JSFL</a> script, 
-and you can forget about lots of positioning magic numbers in your code.</p>
+export to JSON and bitmaps with provided 
+<a href="https://github.com/xense/phaser-ui-comps/blob/master/jsfl/ExportToPhaser.jsfl">JSFL script</a> 
+, and you can forget about lots of positioning magic numbers in your code.</p>
 <p><code>ComponentClip</code> build itself with provided JSON and atlases, 
 and <code>ComponentPrototype</code> Will help to control them, switch states, 
 listen to click, drag and other events.</p>
@@ -127,29 +127,41 @@ so nothing bad happens, if you remove some button in your window in Animate</p>
 <p>All bitmaps are exported to png files with the same folder structure 
 as in the Animate document library. Pack them to atlases using
 <a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.</p>
-<p><strong>Framework main repo</strong><br>
-<a href="https://github.com/xense/phaser-ui-comps">https://github.com/xense/phaser-ui-comps</a></p>
-<p><strong>Docs, tutorials, examples</strong><br>
-<a href="https://xense.github.io/phaser-ui-comps-docs">https://xense.github.io/phaser-ui-comps-docs</a></p>
-<p><strong>Live example</strong><br>
-<a href="https://xense.github.io/phaser-ui-comps-docs/example/example.html">https://xense.github.io/phaser-ui-comps-docs/example/example.html</a></p>
-<p><strong>Issues, bugs, new components ideas</strong><br>
-<a href="https://github.com/xense/phaser-ui-comps/issues">https://github.com/xense/phaser-ui-comps/issues</a></p>
-<p><em>To run JSFL script in Animate select <code>Commands &gt; Run Command</code>, 
-navigate to the script, and click Open.</em></p>
-<p>To install the latest version on npm locally and save it in your <code>package.json</code> file:</p>
+<h3>Links</h3>
+<h4><strong>Framework main repo</strong></h4>
+<a href="https://github.com/xense/phaser-ui-comps">https://github.com/xense/phaser-ui-comps</a><br>
+
+<h4><strong>Docs, tutorials, examples</strong></h4>
+<a href="https://xense.github.io/phaser-ui-comps-docs">https://xense.github.io/phaser-ui-comps-docs</a><br>
+
+<h4><strong>Live example</strong></h4>
+<a href="https://xense.github.io/phaser-ui-comps-docs/example/example.html">https://xense.github.io/phaser-ui-comps-docs/example/example.html</a><br>
+
+<h4><strong>Issues, bugs, new components ideas</strong></h4>
+<a href="https://github.com/xense/phaser-ui-comps/issues">https://github.com/xense/phaser-ui-comps/issues</a><br>
+
+<em>To run JSFL script in Animate select <code>Commands &gt; Run Command</code>, 
+navigate to the script, and click Open.</em>
+
+<h3>Installation</h3>
+
+<p>To install the latest version on 
+<a href="https://www.npmjs.com">npm</a> 
+locally and save it in your <code>package.json</code> file:</p>
 <pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps </code></pre><p>Or you can download minified version from 
 <a href="https://github.com/xense/phaser-ui-comps/dist">https://github.com/xense/phaser-ui-comps/dist</a></p>
-<p><h4>Note!</h4>
+<p><strong><em>Note!</em></strong>
 <em>PhaserComps uses <a href="https://underscorejs.org/">underscore.js</a>
 There are two builds in the /dist folder, 
 <a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-jsfl-with-underscore.min.js">one</a> 
 with underscore included and 
 <a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-jsfl.min.js">other</a> 
 without it, so you need to load it before loading PhaserComps</em> </p>
-<p><h4>Simple usage:<h4></p>
+<h3>Simple usage</h3>
+
 <pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = 'comp-config';
 const TEXTURE_CONFIG = 'my_texture';
+
 
 var game = new Phaser.Game({
     type: Phaser.AUTO,
@@ -161,6 +173,7 @@ var game = new Phaser.Game({
         create: create
     }
 });
+
 
 function preload() {
     this.load.json(COMPONENT_CONFIG, 'assets/my_component.json');
@@ -181,96 +194,6 @@ function create() {
 
 
 
-
-
-
-
-	<h1 class="page-title">Index</h1>
-<section>
-
-<header>
-    
-        <h2>
-            <span class="ancestors"><a href="JSFL.html">JSFL</a></span>
-        
-        jsfl/ExportToPhaser.jsfl
-        </h2>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>blablalba</p></div>
-        
-
-        
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 
@@ -318,7 +241,7 @@ function create() {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T12:57:18+03:00
+		on 2019-04-03T14:22:27+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
