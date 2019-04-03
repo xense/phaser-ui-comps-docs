@@ -1,0 +1,68 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="650" height="450" currentTimeline="1" xflVersion="2.96" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 18.0 build 126" majorVersion="18" buildNumber="126" viewAngle3D="63.2009559306251" vanishingPoint3DX="325" vanishingPoint3DY="225" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="3CE50BB6-55CF-47A6-B591-01286DDDC64C" fileGUID="E190C75FE7474044AFAFF57DD608BE8B">
+     <folders>
+          <DOMFolderItem name="bitmaps" itemID="5c9b8a1b-00000432" isExpanded="true"/>
+          <DOMFolderItem name="bitmaps/buttons" itemID="5c9b8dc4-0000049d" isExpanded="true"/>
+          <DOMFolderItem name="comps" itemID="5ca1feed-000000e5" isExpanded="true"/>
+     </folders>
+     <media>
+          <DOMBitmapItem name="bitmaps/9slice-bottom-center" itemID="5c9b8a50-00000454" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-bottom-center.png" sourceLastImported="1553956863" externalFileCRC32="1008345941" externalFileSize="3630" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-bottom-center.png" bitmapDataHRef="M 4 1553697339.dat" frameRight="80" frameBottom="440"/>
+          <DOMBitmapItem name="bitmaps/9slice-bottom-left" itemID="5c9b8a5e-00000457" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-bottom-left.png" sourceLastImported="1553956863" externalFileCRC32="4264978037" externalFileSize="4093" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-bottom-left.png" bitmapDataHRef="M 1 1553697339.dat" frameRight="580" frameBottom="580"/>
+          <DOMBitmapItem name="bitmaps/9slice-bottom-right" itemID="5c9b8a47-00000452" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-bottom-right.png" sourceLastImported="1553956863" externalFileCRC32="3928096961" externalFileSize="4162" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-bottom-right.png" bitmapDataHRef="M 6 1553697339.dat" frameRight="580" frameBottom="580"/>
+          <DOMBitmapItem name="bitmaps/9slice-center" itemID="5c9b8a42-00000451" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-center.png" sourceLastImported="1553956863" externalFileCRC32="3933238554" externalFileSize="3575" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-center.png" bitmapDataHRef="M 5 1553697339.dat" frameRight="200" frameBottom="200"/>
+          <DOMBitmapItem name="bitmaps/9slice-top-center" itemID="5c9b8a55-00000455" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-top-center.png" sourceLastImported="1553956863" externalFileCRC32="1922382703" externalFileSize="3614" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-top-center.png" bitmapDataHRef="M 3 1553697339.dat" frameRight="80" frameBottom="260"/>
+          <DOMBitmapItem name="bitmaps/9slice-top-left" itemID="5c9b8a59-00000456" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/9slice-top-left.png" sourceLastImported="1553956863" externalFileCRC32="997193475" externalFileSize="3922" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/9slice-top-left.png" bitmapDataHRef="M 2 1553697339.dat" frameRight="580" frameBottom="580"/>
+          <DOMBitmapItem name="bitmaps/buttons/button_disable" itemID="5c9b8df6-000004f0" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/button_disable.png" sourceLastImported="1553956863" externalFileSize="3922" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/button_disable.png" bitmapDataHRef="M 14 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/button_over" itemID="5c9b8df0-000004ef" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/button_over.png" sourceLastImported="1553956863" externalFileSize="3805" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/button_over.png" bitmapDataHRef="M 15 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/button_up" itemID="5c9b8dec-000004ee" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/button_up.png" sourceLastImported="1553956863" externalFileSize="3718" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/button_up.png" bitmapDataHRef="M 16 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/check" itemID="5c9b8de3-000004ec" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/check.png" sourceLastImported="1553956863" externalFileSize="4289" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/check.png" bitmapDataHRef="M 18 1553698247.dat" frameRight="460" frameBottom="420"/>
+          <DOMBitmapItem name="bitmaps/buttons/checkbox_disable" itemID="5c9b8de8-000004ed" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/checkbox_disable.png" sourceLastImported="1553956863" externalFileSize="3878" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/checkbox_disable.png" bitmapDataHRef="M 17 1553698247.dat" frameRight="600" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/checkbox_over" itemID="5c9b8dde-000004eb" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/checkbox_over.png" sourceLastImported="1553956863" externalFileSize="3745" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/checkbox_over.png" bitmapDataHRef="M 19 1553698247.dat" frameRight="600" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/checkbox_up" itemID="5c9b8dd8-000004ea" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/checkbox_up.png" sourceLastImported="1553956863" externalFileSize="3661" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/checkbox_up.png" bitmapDataHRef="M 20 1553698247.dat" frameRight="600" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/gray line" itemID="5c9b8e5a-00000506" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/gray line.png" sourceLastImported="1553956863" externalFileSize="73" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/gray line.png" bitmapDataHRef="M 8 1553698130.dat" frameRight="400" frameBottom="20"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_disable" itemID="5c9b8dfa-000004f1" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/tab_disable.png" sourceLastImported="1553956863" externalFileSize="4055" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_disable.png" bitmapDataHRef="M 13 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_disable_select" itemID="5c9b8dfe-000004f2" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/tab_disable_select.png" sourceLastImported="1553956863" externalFileSize="4144" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_disable_select.png" bitmapDataHRef="M 12 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_down" itemID="5c9b8e07-000004f4" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/tab_down.png" sourceLastImported="1553956863" externalFileSize="3981" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_down.png" bitmapDataHRef="M 10 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_down_select" itemID="5c9b8e13-000004f6" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/_0002_tab_down_select.png" sourceLastImported="1553956863" externalFileSize="4057" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_down_select.png" bitmapDataHRef="M 23 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_over" itemID="5c9b8e02-000004f3" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/tab_over.png" sourceLastImported="1553956863" externalFileSize="3955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_over.png" bitmapDataHRef="M 11 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_over_select" itemID="5c9b8e0f-000004f5" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/_0003_tab_over_select.png" sourceLastImported="1553956863" externalFileSize="4044" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_over_select.png" bitmapDataHRef="M 9 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_up" itemID="5c9b8e19-000004f7" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/_0001_tab_up.png" sourceLastImported="1553956863" externalFileSize="3820" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_up.png" bitmapDataHRef="M 22 1553698247.dat" frameRight="2280" frameBottom="600"/>
+          <DOMBitmapItem name="bitmaps/buttons/tab_up_select" itemID="5c9b8dcf-000004e9" sourceExternalFilepath="../UI2/LIBRARY/bitmaps/buttons/tab_up_select.png" sourceLastImported="1553956863" externalFileSize="3830" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmaps/buttons/tab_up_select.png" bitmapDataHRef="M 21 1553698247.dat" frameRight="2280" frameBottom="600"/>
+     </media>
+     <symbols>
+          <Include href="comps/button.xml" loadImmediate="false" itemID="5c9b9a5a-00000630" lastModified="1553701524"/>
+          <Include href="comps/button_arrow.xml" loadImmediate="false" itemID="5c9fa133-000000af" lastModified="1553965406"/>
+          <Include href="comps/button_check.xml" loadImmediate="false" itemID="5c9b8ff3-000005a2" lastModified="1553698991"/>
+          <Include href="comps/button_tab.xml" loadImmediate="false" itemID="5c9b8e48-00000500" lastModified="1553756750"/>
+          <Include href="comps/HIT_ZONE.xml" loadImmediate="false" itemID="5c9b8faf-0000057f" lastModified="1553698735"/>
+          <Include href="comps/Scroll Bar Horisontal.xml" loadImmediate="false" itemID="5ca0f2ca-00000130" lastModified="1554051934"/>
+          <Include href="comps/Scroll Bar Vertical.xml" loadImmediate="false" itemID="5ca1ff0b-000000e6" lastModified="1554120459"/>
+          <Include href="WindowTest.xml" itemID="5c9b8a73-0000045e" lastModified="1554055403"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Монтажный кадр 1">
+               <layers>
+                    <DOMLayer name="Слой_1" color="#00FFFF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="WindowTest" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="25" ty="25"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts>
+          <GlobalScripts language="Javascript"/>
+     </scripts>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>

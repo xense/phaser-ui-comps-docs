@@ -1,0 +1,588 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="WindowTest" itemID="5c9b8a73-0000045e" linkageExportForAS="true" linkageClassName="WindowTest" lastModified="1554055403" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="WindowTest" currentFrame="1">
+      <layers>
+        <DOMLayer name="head" color="#009999" autoNamed="false" open="false" layerType="folder"/>
+        <DOMLayer name="title" color="#9933CC" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="title" fontRenderingMode="standard" width="546" height="20.1" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="22" ty="18"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Window title textfield</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="0" lineHeight="20.1" size="18" bitmapSize="360" face="Arial-BoldItalicMT" fillColor="#333333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button_tab" color="#FF0000" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_tab" name="tab_4">
+                  <matrix>
+                    <Matrix tx="400" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button_tab" color="#669900" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_tab" name="tab_3">
+                  <matrix>
+                    <Matrix tx="280" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button_tab" color="#FF4F4F" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_tab" name="tab_2">
+                  <matrix>
+                    <Matrix tx="160" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button_tab" color="#00FFFF" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_tab" name="tab_1">
+                  <matrix>
+                    <Matrix tx="40" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gray line" color="#FF800A" parentLayerIndex="0" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/gray line">
+                  <matrix>
+                    <Matrix a="27.5" tx="20" ty="84"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="state 'scroll' content" color="#FF4F4F" autoNamed="false" layerType="folder"/>
+        <DOMLayer name="Слой_28" color="#669900" parentLayerIndex="7">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="state 'buttons' content" color="#FF0000" autoNamed="false" layerType="folder"/>
+        <DOMLayer name="btn_3" color="#669900" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button" name="btn_3">
+                  <matrix>
+                    <Matrix tx="329" ty="294.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="btn_2" color="#00FFFF" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button" name="btn_2">
+                  <matrix>
+                    <Matrix tx="187" ty="294.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="btn_1" color="#9933CC" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button" name="btn_1">
+                  <matrix>
+                    <Matrix tx="40" ty="294.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="txt_bar_value" color="#FF4FFF" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="txt_bar_value" fontRenderingMode="standard" width="225" height="14.5" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="305" ty="171.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>bar value:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="14.5" bitmapSize="240" face="Tahoma-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bar value:" color="#009999" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="221" height="56" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="305" ty="105.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Scroll bar below has min and max values, and step&#xD;min = 50, max = 250, step = 20</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="14.5" bitmapSize="240" face="Tahoma"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="scroll_bar_1" color="#FF0000" parentLayerIndex="9" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/Scroll Bar Vertical" name="scroll_bar_1">
+                  <matrix>
+                    <Matrix tx="255" ty="100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="135"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="scroll_bar_2" color="#FF4F4F" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/Scroll Bar Horisontal" name="scroll_bar_2" centerPoint3DX="318.05" centerPoint3DY="329.85">
+                  <matrix>
+                    <Matrix tx="303" ty="195"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="scroll text dims" color="#669900" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/HIT_ZONE" name="DIMENSIONS">
+                  <matrix>
+                    <Matrix a="11.5" d="13.75" tx="20" ty="100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="test mask" color="#00FFFF" parentLayerIndex="9" autoNamed="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#0066FF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!400 2000|5000 2000!5000 2000|5000 7500!5000 7500|400 7500!400 7500|400 2000"/>
+                    <Edge cubics="!5000 2000(;5000,2000 5000,7500 5000,7500q5000 2000 5000 7500);"/>
+                    <Edge cubics="!400 2000(;400,2000 5000,2000 5000,2000q400 2000 5000 2000);"/>
+                    <Edge cubics="!5000 7500(;5000,7500 400,7500 400,7500q5000 7500 400 7500);"/>
+                    <Edge cubics="!400 7500(;400,7500 400,2000 400,2000q400 7500 400 2000);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="lorem ipsum" color="#9933CC" parentLayerIndex="18" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="txt_scrolling" fontRenderingMode="standard" left="-1973.75" width="226" height="575.5" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="1995.75" ty="102"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis porta neque. Sed eleifend et enim nec sodales. Phasellus facilisis turpis enim, condimentum dignissim orci laoreet a. Maecenas non commodo neque. Maecenas sed molestie eros. Aliquam nec egestas odio. Vivamus congue erat nisl, eget consectetur nulla venenatis non. Phasellus congue sem sit amet augue condimentum, sit amet suscipit arcu imperdiet. Etiam bibendum eleifend sem sed vehicula.&#xD;&#xD;Curabitur sed vestibulum erat. Mauris interdum ipsum est, at pellentesque quam tristique vitae. In orci nisi, placerat id luctus sed, lacinia eu est. Aliquam pretium eget mauris non iaculis. Sed a odio pellentesque, imperdiet mi non, sollicitudin turpis. Ut sollicitudin velit fermentum nunc auctor efficitur. Sed sit amet tortor malesuada, semper justo vel, pulvinar turpis. Etiam turpis odio, bibendum at purus et, maximus laoreet leo. In sit amet arcu et ligula scelerisque gravida. Fusce vitae dolor varius, luctus diam hendrerit, vehicula ipsum. Vestibulum fermentum, enim in pellentesque tincidunt, lorem est faucibus odio, sit amet feugiat massa dui eget eros.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineHeight="14.5" bitmapSize="240" face="Tahoma-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="btn_check_last_tab" color="#009999" parentLayerIndex="9" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_check" name="btn_check_last_tab">
+                  <matrix>
+                    <Matrix tx="40" ty="182.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="buttons descr" color="#FF4F4F" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="506.05" height="46.8" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="42" ty="234"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Here are two simple buttons. They change status text below. The last button is disabled by code. Disabled button is always in 'disable' state, and has no mouse events </characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="15.6" size="14" bitmapSize="280" face="ArialMT" fillColor="#333333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gray line" color="#FF4FFF" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/gray line">
+                  <matrix>
+                    <Matrix a="27.5" tx="20" ty="221"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="status text" color="#FF800A" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="status" fontRenderingMode="standard" width="506.05" height="18.5" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="42" ty="338"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Here is some status text</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="15.6" size="14" bitmapSize="280" face="Arial-BoldMT" fillColor="#333333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="tabs descr" color="#FF4FFF" parentLayerIndex="9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="506.05" height="78" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="42" ty="97"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Here are some tabs, that are technically just Radio buttons&#xD;Checkbox below enables or disables last tab.&#xD;&#xD;P.S. This text field has no key, it is't changed by code, all text is saved in the component config JSON</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="15.6" size="14" bitmapSize="280" face="ArialMT" fillColor="#333333"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="window back" color="#009999" locked="true" autoNamed="false" layerType="folder"/>
+        <DOMLayer name="9slice-center" color="#FF4FFF" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-center">
+                  <matrix>
+                    <Matrix a="56.6988983154297" d="37.0997467041016" tx="12" ty="8"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-bottom-center" color="#FF4FFF" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-bottom-center">
+                  <matrix>
+                    <Matrix a="0" b="-85.5007476806641" c="1" d="0" tx="578" ty="371"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-bottom-center" color="#009999" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-bottom-center">
+                  <matrix>
+                    <Matrix a="135.494094848633" tx="29" ty="378"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-top-center" color="#FF0000" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-top-center">
+                  <matrix>
+                    <Matrix a="0" b="-86.2564544677734" c="1" d="0" ty="373.05"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-top-center" color="#669900" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-top-center">
+                  <matrix>
+                    <Matrix a="135.504440307617" tx="29"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-bottom-right" color="#FF4F4F" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-bottom-right">
+                  <matrix>
+                    <Matrix tx="571" ty="371"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice top right" color="#00FFFF" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-bottom-left">
+                  <matrix>
+                    <Matrix a="9.1552734375e-05" b="0.999984741210938" c="1" d="9.1552734375e-05" tx="571"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="14.55" y="14.6"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-bottom-left" color="#9933CC" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-bottom-left">
+                  <matrix>
+                    <Matrix ty="371"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="9slice-top-left" color="#FF800A" parentLayerIndex="25" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="bitmaps/9slice-top-left"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="STATE_IDS" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="buttons" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="scroll" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="progress" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="other" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

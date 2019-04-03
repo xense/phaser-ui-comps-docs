@@ -1,0 +1,88 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="comps/Scroll Bar Vertical" itemID="5ca1ff0b-000000e6" lastModified="1554120459">
+  <timeline>
+    <DOMTimeline name="Scroll Bar Vertical">
+      <layers>
+        <DOMLayer name="thumb" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button" name="thumb" centerPoint3DX="15" centerPoint3DY="87">
+                  <matrix>
+                    <Matrix a="0" b="-1" c="1" d="0" ty="144"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="57" y="15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hit_zone" color="#00FFFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/HIT_ZONE" name="HIT_ZONE">
+                  <matrix>
+                    <Matrix a="1.5" d="10.4998626708984" ty="30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="btn_up" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_arrow" name="btn_up" centerPoint3DX="15" centerPoint3DY="15">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="30" ty="30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="btn_down" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/button_arrow" name="btn_down">
+                  <matrix>
+                    <Matrix ty="240"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="track" color="#0000FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="comps/HIT_ZONE" name="DIMENSIONS">
+                  <matrix>
+                    <Matrix d="4.89944458007813" tx="5" ty="143"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="9.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
