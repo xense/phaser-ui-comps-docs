@@ -1,13 +1,14 @@
-# Phaser 3 UI Components and jsfl-builder API Documentation and tutorials
+Phaser 3 UI Components and jsfl-builder API Documentation and tutorials
+----
 
 **Framework main repo**<br>
-https://github.com/xense/phaser-ui-comps
+<https://github.com/xense/phaser-ui-comps>
 
 **Docs, tutorials, examples**<br>
-https://xense.github.io/phaser-ui-comps-docs
+<https://xense.github.io/phaser-ui-comps-docs>
 
 **Issues, bugs, new components ideas**<br>
-https://github.com/xense/phaser-ui-comps/issues
+<https://github.com/xense/phaser-ui-comps/issues>
 
 <anton.bystrov@gmail.com>
 
