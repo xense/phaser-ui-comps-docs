@@ -7,13 +7,13 @@ const path = require('path');
 module.exports = {
 
     entry: {
-        app: [path.resolve(__dirname, './examples/src/index.js')]
+        app: [path.resolve(__dirname, 'examples/src/index.js')]
     },
 
     output: {
         pathinfo: true,
         path: path.resolve(__dirname, 'docs/js/'),
-        publicPath: '/docs/js/',
+        publicPath: 'docs/js/',
         filename: 'showcase.bundle.js'
     },
 
@@ -53,7 +53,7 @@ module.exports = {
           {
             test: /\.js$/,
             use: ['babel-loader'],
-            include: path.join(__dirname, 'src')
+            include: path.join(__dirname, 'examples/src/')
           }
         ]
     },
@@ -73,5 +73,5 @@ module.exports = {
         }
     },
 
-    mode: "development"
+    mode: "production"
 };
