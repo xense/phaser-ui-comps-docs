@@ -1,3 +1,5 @@
+import WindowTest from "./WindowTest";
+
 var config = {
 	type: Phaser.AUTO,
 	parent: 'example',
@@ -28,8 +30,8 @@ function create() {
 		['window_atlas']
 	);
 
-	var proto = new PhaserComps.UIComponents.UIComponentPrototype();
-	proto.appendClip(clip);
+	var window = new WindowTest();
+	window.appendClip(clip);
 }
 
 
