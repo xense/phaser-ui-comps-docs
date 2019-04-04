@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="JSFL.html">JSFL</a></li><li><a href="PhaserComps.html">PhaserComps</a></li><li><a href="PhaserComps.UIComponents.html">PhaserComps.UIComponents</a></li>
+					<li><a href="PhaserComps.html">PhaserComps</a></li><li><a href="PhaserComps.UIComponents.html">PhaserComps.UIComponents</a></li>
 				</ul>
 			</li>
 			
@@ -55,13 +55,6 @@
 				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
 					<li><a href="tutorial-animate_build.html">Building UI with Adobe Animate</a></li><li><a href="tutorial-code.html">Code examples</a></li><li><a href="tutorial-example.html">Showcase</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
-				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="global.html#SKIP_LAYER_TYPES">SKIP_LAYER_TYPES</a></li><li><a href="global.html#ZONE_ELEMENT_NAMES">ZONE_ELEMENT_NAMES</a></li>
 				</ul>
 			</li>
 			
@@ -124,10 +117,10 @@ export to JSON and bitmaps with provided
 and <code>ComponentPrototype</code> Will help to control them, switch states, 
 listen to click, drag and other events.
 
-In addition, <code>ComponentPrototype</code> and it's children classes don't mind, 
+In addition, <code>ComponentPrototype</code> and it&quot;s children classes don&quot;t mind, 
 if they have a real clip instance in current state or at all,
 so nothing bad happens, for example, if you remove some button instance in your window in 
-Animate document and keep it's <code>ComponentPrototype</code> instance.
+Animate document and keep it&quot;s <code>ComponentPrototype</code> instance.
 
 All bitmaps are exported to png files with the same folder structure 
 as in the Animate document library. Pack them to atlases using
@@ -141,7 +134,7 @@ as in the Animate document library. Pack them to atlases using
 <a href="https://xense.github.io/phaser-ui-comps-docs">https://xense.github.io/phaser-ui-comps-docs</a><br>
 
 <h4><strong>Live example</strong></h4>
-<a href="https://xense.github.io/phaser-ui-comps-docs/example/example.html">https://xense.github.io/phaser-ui-comps-docs/example/example.html</a><br>
+<a href="https://xense.github.io/phaser-ui-comps-docs/tutorial-example.html">https://xense.github.io/phaser-ui-comps-docs/tutorial-example.html</a><br>
 
 <h4><strong>Issues, bugs, new components ideas</strong></h4>
 <a href="https://github.com/xense/phaser-ui-comps/issues">https://github.com/xense/phaser-ui-comps/issues</a><br>
@@ -155,8 +148,8 @@ navigate to the script, and click Open.</em>
 <a href="https://www.npmjs.com">npm</a> 
 locally and save it in your <code>package.json</code> file:</p>
 <pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps </code></pre><p>Or you can download minified version from 
-<a href="https://github.com/xense/phaser-ui-comps/dist">https://github.com/xense/phaser-ui-comps/dist</a></p>
-<p><strong><em>Note!</em></strong>
+<a href="https://github.com/xense/phaser-ui-comps/tree/master/dist">https://github.com/xense/phaser-ui-comps/tree/master/dist</a></p>
+<p><em><em>Note!</em></em>
 <em>PhaserComps uses <a href="https://underscorejs.org/">underscore.js</a>
 There are two builds in the /dist folder, 
 <a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps-with-underscore.min.js">one</a> 
@@ -166,13 +159,13 @@ without it, so you need to load it before loading PhaserComps</em> </p>
 <h3>Simple usage</h3>
 
 <pre class="prettyprint source lang-html"><code>&lt;script src=&quot;path/to/script/phaser.js&quot;>&lt;/script>
-&lt;script src=&quot;path/to/script/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = 'comp-config';
-const TEXTURE_CONFIG = 'my_texture';
+&lt;script src=&quot;path/to/script/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = &quot;comp-config&quot;;
+const TEXTURE_CONFIG = &quot;my_texture&quot;;
 
 
 var game = new Phaser.Game({
     type: Phaser.AUTO,
-    parent: 'phaser-example',
+    parent: &quot;phaser-example&quot;,
     width: 800,
     height: 600,
     scene: {
@@ -183,8 +176,8 @@ var game = new Phaser.Game({
 
 
 function preload() {
-    this.load.json(COMPONENT_CONFIG, 'assets/my_component.json');
-    this.load.multiatlas(TEXTURE_CONFIG, 'assets/atlases/my_atlas.json', 'assets/atlases/');
+    this.load.json(COMPONENT_CONFIG, &quot;assets/my_component.json&quot;);
+    this.load.multiatlas(TEXTURE_CONFIG, &quot;assets/atlases/my_atlas.json&quot;, &quot;assets/atlases/&quot;);
 }
 
 function create() {
@@ -248,7 +241,7 @@ function create() {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-03T18:34:42+03:00
+		on 2019-04-04T11:11:51+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
