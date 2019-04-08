@@ -53,8 +53,28 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 		bar2.setValueBounds(50, 250, 20);
 		bar2.on(PhaserComps.UIComponents.UIScrollBar.EVENT_CHANGE, this.onScrollBar2, this);
 
+
+		/////////// TAB 3
+
+		let scrollForProgress = new PhaserComps.UIComponents.UIScrollBar(this, "scroll_bar_progress", false);
+		scrollForProgress.on(PhaserComps.UIComponents.UIScrollBar.EVENT_CHANGE, this.onScrollBarProgress, this);
+
+		this.progressBar = new PhaserComps.UIComponents.UIProgressBar(this, "progress_bar_1");
+		this.progressBar.value = scrollForProgress.value;
+
+		this.progressBar2 = new PhaserComps.UIComponents.UIProgressBar(this, "progress_bar_2");
+		this.progressBar2.value = scrollForProgress.value;
+
+
+
+
 		// IMPORTANT! make doState after all child components created
 		this._firstTab.select = true;
+	}
+
+	onScrollBarProgress(value) {
+		this.progressBar.value = value;
+		this.progressBar2.value = value;
 	}
 
 	onTabSelect(value) {

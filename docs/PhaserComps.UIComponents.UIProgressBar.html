@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Index</title>
+	<title>Phaser 3 UI Components Class: UIProgressBar</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,108 +86,282 @@
 		<div id="main">
 			
 
+	<h1 class="page-title">Class: UIProgressBar</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
+        
+        UIProgressBar
+        </h2>
+        
+            <div class="class-description"><p>Progress bar</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="UIProgressBar"><span class="type-signature"></span>new UIProgressBar( [parent] [, key])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>UIComponentPrototype instance to find clip inside</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>key to find clip inside parent</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>current progress value, between 0 and 1</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
 	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
 	
 
 
 
-
-
-
-
-
-
-
-
-	
 	
 
+	
+
+	
+
+	
+</dl>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
 
 
-    <section class="readme-section">
-        <article><h2>﻿Phaser 3 UI Components, built by Adobe Animate</h2><h3>What is it?</h3>
-Build your UI in <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a>, 
-export to JSON and bitmaps with provided 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/jsfl/ExportToPhaser.jsfl">JSFL script</a> 
-, and you can forget about lots of positioning magic numbers in your code.
-
-<code>ComponentClip</code> build itself with provided JSON and atlases, 
-and <code>UIComponentPrototype</code> Will help to control them, switch states, 
-listen to click, drag and other events.
-
-In addition, <code>UIComponentPrototype</code> and it's children classes don't mind, 
-if they have a real clip instance in current state or at all,
-so nothing bad happens, for example, if you remove some button instance in your window in 
-Animate document and keep it's <code>UIComponentPrototype</code> instance.
-
-All bitmaps are exported to png files with the same folder structure 
-as in the Animate document library. Pack them to atlases using
-<a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.
-
-<h3>Where and how to use?</h3>
-
-<p><a href="https://github.com/xense/phaser-ui-comps">Main framework repo</a></p>
-<p><a href="https://xense.github.io/phaser-ui-comps-docs">Docs, tutorials, examples</a></p>
-<p><a href="https://xense.github.io/phaser-ui-comps-docs/tutorial-showcase.html">Live example</a></p>
-<p><a href="https://github.com/xense/phaser-ui-comps/issues">Issues, bugs, new components ideas</a></p>
-<p><a href="https://github.com/xense/phaser-ui-comps-docs/raw/master/examples/xfl/UI.fla">Animate document example</a></p>
-<p><h4>Export Animate document</h4>
-To run JSFL script in Animate select <code>Commands &gt; Run Command</code>, 
-navigate to the script, and click Open.</p>
-<h3>How to install?</h3>
-
-<p>To install the latest version from 
-<a href="https://www.npmjs.com">npm</a>
-locally and save it in your <code>package.json</code> file:</p>
-<pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps </code></pre><p>Or you can download minified version from 
-<a href="https://github.com/xense/phaser-ui-comps/tree/master/dist">https://github.com/xense/phaser-ui-comps/tree/master/dist</a></p>
-<p><em>Note!</em>
-<em>PhaserComps uses <a href="https://underscorejs.org/">underscore.js</a>
-There are two builds in the /dist folder, 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps-with-underscore.min.js">one</a> 
-with underscore included and 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps.min.js">other</a> 
-without it, so you need to load it before loading PhaserComps</em> </p>
-<h3>Simple usage</h3>
-
-<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;path/to/scripts/phaser.js&quot;>&lt;/script>
-&lt;script src=&quot;path/to/scripts/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = &quot;comp-config&quot;;
-const TEXTURE_CONFIG = &quot;my_texture&quot;;
+    <ul>
+        <li>Phaser.Events.EventEmitter</li>
+    </ul>
 
 
-var game = new Phaser.Game({
-    type: Phaser.AUTO,
-    parent: &quot;phaser-example&quot;,
-    width: 800,
-    height: 600,
-    scene: {
-        preload: preload,
-        create: create
-    }
-});
+    
 
+    
 
-function preload() {
-    this.load.json(COMPONENT_CONFIG, &quot;assets/my_component.json&quot;);
-    this.load.multiatlas(TEXTURE_CONFIG, &quot;assets/atlases/my_atlas.json&quot;, &quot;assets/atlases/&quot;);
-}
+    
 
-function create() {
-    let clip = new PhaserComps.ComponentClip(
-        this, 
-        this.cache.json.get(COMPONENT_CONFIG), 
-        [ TEXTURE_CONFIG ]
-    );
+    
 
-    let component = new PhaserComps.UIComponents.UIComponentPrototype();
-    component.appendClip(clip);
-}</code></pre></article>
-    </section>
+    
 
+    
 
+    
 
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -235,7 +409,7 @@ function create() {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-04-08T19:14:19+03:00
+		on 2019-04-08T19:14:20+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
