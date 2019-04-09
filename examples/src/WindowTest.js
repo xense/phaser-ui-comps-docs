@@ -66,6 +66,11 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 		this.progressBar2.value = scrollForProgress.value;
 
 
+		//////////// TAB 4
+		new PhaserComps.UIComponents.UIButton(this, "btn_star", "Star it!").on(
+			PhaserComps.UIComponents.UIButton.EVENT_CLICK,
+			() => { window.open("https://github.com/xense/phaser-ui-comps", "_blank"); }
+		);
 
 
 		// IMPORTANT! make doState after all child components created
