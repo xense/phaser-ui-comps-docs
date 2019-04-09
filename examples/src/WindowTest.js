@@ -75,6 +75,7 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 	onScrollBarProgress(value) {
 		this.progressBar.value = value;
 		this.progressBar2.value = value;
+		this.setText("progress_value", "Progress value: " + value);
 	}
 
 	onTabSelect(value) {
