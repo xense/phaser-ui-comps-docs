@@ -17,10 +17,11 @@ var config = {
 	}
 };
 
-var game = new Phaser.Game(config);
+window.game = new Phaser.Game(config);
 
 function preload() {
 	this.load.json('window_config', 'jsons/WindowTest.json');
+	this.load.json('button_config', 'jsons/ButtonBlue.json');
 	this.load.multiatlas('window_atlas', 'atlases/WindowTest_images.json', 'atlases/');
 }
 
@@ -30,7 +31,7 @@ function create() {
 		['window_atlas']
 	);
 
-	var window = new WindowTest();
+	let window = new WindowTest(this);
 	window.appendClip(clip);
 }
 

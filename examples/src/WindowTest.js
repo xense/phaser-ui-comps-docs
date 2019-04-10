@@ -1,6 +1,7 @@
 export default class WindowTest extends PhaserComps.UIComponents.UIComponentPrototype {
-	constructor() {
+	constructor(scene) {
 		super();
+		this._scene = scene;
 
 		this.setText('title', 'WOW SUCH TITLE!');
 
@@ -12,9 +13,10 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 		// create other tabs
 		new PhaserComps.UIComponents.UIButtonRadio(this, 'tab_2', 'Scrollbars', 'scroll', this._firstTab);
 		new PhaserComps.UIComponents.UIButtonRadio(this, 'tab_3', 'Progressbars', 'progress', this._firstTab);
+		new PhaserComps.UIComponents.UIButtonRadio(this, 'tab_4', 'Containers', 'containers', this._firstTab);
 		this.lastTab = new PhaserComps.UIComponents.UIButtonRadio(
 			this,
-			'tab_4',
+			'tab_5',
 			'Other stuff',
 			'other',
 			this._firstTab
@@ -65,8 +67,23 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 		this.progressBar2 = new PhaserComps.UIComponents.UIProgressBar(this, "progress_bar_2");
 		this.progressBar2.value = scrollForProgress.value;
 
-
 		//////////// TAB 4
+
+		this.testContainer = new PhaserComps.UIComponents.UIContainer(this, "container_1");
+		this.testButtons = [];
+		this.lastButtonIndex = 0;
+		this.lastButtonY = 0;
+
+		new PhaserComps.UIComponents.UIButton(this, "btn_add", "Add button").on(
+			PhaserComps.UIComponents.UIButton.EVENT_CLICK, this.onButtonAdd, this
+		);
+
+		this.btnRemove = new PhaserComps.UIComponents.UIButton(this, "btn_remove", "Remove button").on(
+			PhaserComps.UIComponents.UIButton.EVENT_CLICK, this.onButtonRemove, this
+		);
+		this.btnRemove.enable = false;
+
+		//////////// TAB 5
 		new PhaserComps.UIComponents.UIButton(this, "btn_star", "Star it!").on(
 			PhaserComps.UIComponents.UIButton.EVENT_CLICK,
 			() => { window.open("https://github.com/xense/phaser-ui-comps", "_blank"); }
@@ -84,7 +101,7 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 	}
 
 	onTabSelect(value) {
-		console.log('selected tab value:', value);
+		//console.log('selected tab value:', value);
 		this.doState();
 	}
 
@@ -101,5 +118,34 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 
 	onScrollBar2(value) {
 		this.setText('txt_bar_value', 'Bar value: ' + value);
+	}
+
+	onButtonAdd() {
+		let buttonClip = this._scene.add.ui_component(
+			window.game.cache.json.get('button_config'),
+			['window_atlas']
+		);
+		buttonClip.groupY = this.lastButtonY;
+		this.lastButtonY += 40;
+
+		let button = new PhaserComps.UIComponents.UIButton();
+		button.appendClip(buttonClip);
+
+
+		button.label = "Button " + this.lastButtonIndex;
+		this.lastButtonIndex++;
+		this.testButtons.push(button);
+
+		this.testContainer.addChild(button);
+
+		this.btnRemove.enable = true;
+	}
+
+	onButtonRemove() {
+		let button = this.testButtons.pop();
+		this.testContainer.removeChild(button);
+		button.destroy();
+		this.lastButtonY -= 40;
+		this.btnRemove.enable = this.testButtons.length > 0;
 	}
 }

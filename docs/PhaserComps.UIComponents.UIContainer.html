@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIButton</title>
+	<title>Phaser 3 UI Components Class: UIContainer</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,7 +86,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIButton</h1>
+	<h1 class="page-title">Class: UIContainer</h1>
 <section>
 
 <header>
@@ -94,12 +94,12 @@
         <h2>
             <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
         
-        UIButton
+        UIContainer
         </h2>
         
-            <div class="class-description"><p>Button component prototype, has states <code>up</code>, <code>over</code>, <code>down</code>, <code>disable</code>
-Emits EVENT_CLICK on click.
-When disabled, doesn't interact to mouse events and move to state <code>disable</code></p></div>
+            <div class="class-description"><p>Base container component. Allows to add dynamically created UIComponents inside other components.</p>
+<p>Child components clips must be root components only, not any clip's children.</p>
+<p>Note, that UIContainer can be only a child component of another UIComponentPrototype instance.</p></div>
         
     
 </header>
@@ -111,7 +111,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
         
 <hr>
 <dt>
-    <h4 class="name" id="UIButton"><span class="type-signature"></span>new UIButton( [parent] [, key] [, labelText])</h4>
+    <h4 class="name" id="UIContainer"><span class="type-signature"></span>new UIContainer(parent, key)</h4>
     
     
 </dt>
@@ -137,8 +137,6 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
         <th>Type</th>
 
-        
-        <th>Argument</th>
         
 
         
@@ -166,16 +164,6 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
@@ -200,54 +188,10 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
             <td class="description last"><p>key to find clip inside parent</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>labelText</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>text to set for a 'label' key</p></td>
         </tr>
 
     
@@ -260,83 +204,6 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 <dl class="details">
     
 
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>enable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>activate/deactivate button interaction. if false, button state is set to <code>disable</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>label</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>get/set button label text</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
 	
 
 	
@@ -375,11 +242,6 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
     
 
-    
-    <h5>Fires:</h5>
-    <ul>
-        <li><a href="PhaserComps.UIComponents.UIButton.html#.event:EVENT_CLICK">PhaserComps.UIComponents.UIButton.event:EVENT_CLICK</a></li>
-    </ul>
     
 
     
@@ -426,7 +288,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
             
 <hr>
 <dt>
-    <h4 class="name" id="_onClick"><span class="type-signature">&lt;protected> </span>_onClick()</h4>
+    <h4 class="name" id="addChild"><span class="type-signature"></span>addChild(child)</h4>
     
     
 </dt>
@@ -434,7 +296,7 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
 
     
     <div class="description">
-        <p>called when button hit zone clicked, emits EVENT_CLICK</p>
+        <p>Adds child to children list, and adds it to Phaser container instance, if one exists</p>
     </div>
     
 
@@ -443,6 +305,56 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>child</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>child component to add</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -496,6 +408,30 @@ When disabled, doesn't interact to mouse events and move to state <code>disable<
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>child</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -795,7 +731,7 @@ Use only for root instance, child instances will be appended automatically depen
 	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
 	<dd class="tag-see">
 		<ul>
-			<li><a href="PhaserComps.UIComponents.UIButton.html#getStateId">#getStateId</a></li>
+			<li><a href="PhaserComps.UIComponents.UIContainer.html#getStateId">#getStateId</a></li>
 			</ul>
 	</dd>
 	
@@ -861,11 +797,6 @@ Use only for root instance, child instances will be appended automatically depen
 	</dd>
 	
 
-    
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
-        <a href="PhaserComps.UIComponents.UIComponentPrototype.html#getStateId">PhaserComps.UIComponents.UIComponentPrototype#getStateId</a>
-    </li></ul></dd>
     
 
     
@@ -1188,11 +1119,6 @@ Use only for root instance, child instances will be appended automatically depen
 	
 
     
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
-        <a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipAppend">PhaserComps.UIComponents.UIComponentPrototype#onClipAppend</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1412,10 +1338,133 @@ like remove clip events listeners.</p>
 	
 
     
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
-        <a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipRemove">PhaserComps.UIComponents.UIComponentPrototype#onClipRemove</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeChild"><span class="type-signature"></span>removeChild(child)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Removes child from children list, and removes it from Phaser container instance, if one exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>child</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>child component to remove</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
     
 
     
@@ -1457,6 +1506,30 @@ like remove clip events listeners.</p>
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>returns child param</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -1714,88 +1787,6 @@ Text value is saved in the component's instance dictionary and will be set to th
 
     
 
-    
-        <h3 class="subsection-title">Events</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id=".event:EVENT_CLICK">EVENT_CLICK</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Emitted on click</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        </dl>
     
 </article>
 
