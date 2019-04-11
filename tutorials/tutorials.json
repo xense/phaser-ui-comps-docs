@@ -2,8 +2,8 @@
   "animate_build": {
 	"title": "Building UI with Adobe Animate",
 	"children": {
-	  "states": {
-		"title": "Understanding states"
+	  "texturepacker": {
+		"title": "Making atlases with TexturePacker"
 	  }
 	}
   },
