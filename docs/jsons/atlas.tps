@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -82,7 +82,7 @@
         <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>1</uint>
         <key>maxTextureSize</key>
@@ -149,7 +149,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <false/>
+        <true/>
         <key>trimSpriteNames</key>
         <true/>
         <key>prependSmartFolderName</key>
@@ -169,7 +169,7 @@
             <key>trimMargin</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">None</enum>
+            <enum type="SpriteSettings::TrimMode">Trim</enum>
             <key>tracerTolerance</key>
             <int>200</int>
             <key>heuristicMask</key>
@@ -261,6 +261,19 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">_images/common/windowNewsDescrBack.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>77,41,155,81</rect>
+                <key>scale9Paddings</key>
+                <rect>77,41,155,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">_images/common/window_back.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -310,6 +323,33 @@
                 <rect>50,50,100,100</rect>
                 <key>scale9Paddings</key>
                 <rect>50,50,100,100</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">_images/progress/button_chat.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,10,21,21</rect>
+                <key>scale9Paddings</key>
+                <rect>10,10,21,21</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">_images/progress/circle progress back.png</key>
+            <key type="filename">_images/progress/round_red.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>65,42,131,84</rect>
+                <key>scale9Paddings</key>
+                <rect>65,42,131,84</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -375,6 +415,19 @@
                 <rect>5,3,10,6</rect>
                 <key>scale9Paddings</key>
                 <rect>5,3,10,6</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">_images/progress/red_arrow.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,15,24,29</rect>
+                <key>scale9Paddings</key>
+                <rect>12,15,24,29</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
