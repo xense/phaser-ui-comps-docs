@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: StateManager</title>
+	<title>Phaser 3 UI Components Namespace: UIManager</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,21 +86,23 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: StateManager</h1>
+	<h1 class="page-title">Namespace: UIManager</h1>
 <section>
 
 <header>
     
         <h2>
-            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.ComponentClip.html">.ComponentClip</a>.</span>
+            <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a>.</span>
         
-        StateManager
+        UIManager
         </h2>
         
-            <div class="class-description"><p>For <a href="PhaserComps.ComponentClip.html"><code>ComponentClip</code></a>
-internal use only</p>
-<p>Shows or hides component view instances depending on which state is active.
-Helps to get current active components by keys.</p></div>
+            <div class="class-description"><p>Allows to lock all ui, except for provided lock ids.
+For this, you must set <code>lockId</code> property to UIComponentPrototype instances you want to enable,
+and then switch theirs availability by UIManager's
+<code>lock</code> and <code>unlock</code> methods</p>
+<p>For example, locked UIButton will still interact to mouse events, but will not emit click event.</p>
+<p>This can be useful in game tutorials.</p></div>
         
     
 </header>
@@ -110,98 +112,8 @@ Helps to get current active components by keys.</p></div>
     <div class="container-overview">
     
         
-<hr>
-<dt>
-    <h4 class="name" id="StateManager"><span class="type-signature"></span>new StateManager(clip, config)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
 
         
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>clip</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>state manager creator clip instance</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>config</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Main component states config object</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
 <dl class="details">
     
 
@@ -241,21 +153,7 @@ Helps to get current active components by keys.</p></div>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
+        
     
     </div>
 
@@ -278,12 +176,16 @@ Helps to get current active components by keys.</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="addComponent"><span class="type-signature"></span>addComponent(component, childId [, childKey])</h4>
+    <h4 class="name" id=".check"><span class="type-signature">&lt;static> </span>check(id)</h4>
     
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        <p>called from component to check, if it's allowed to emit UI event.</p>
+    </div>
     
 
     
@@ -305,8 +207,6 @@ Helps to get current active components by keys.</p></div>
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -319,42 +219,7 @@ Helps to get current active components by keys.</p></div>
 
         <tr>
             
-                <td class="name"><code>component</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
-|
-
-<span class="param-type">Phaser.GameObjects.GameObject</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>component view instance, it may be text, image, sprite, or ComponentView instance</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>childId</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -368,52 +233,10 @@ Helps to get current active components by keys.</p></div>
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>unique child id from component config</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>childKey</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>child key from component config</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -481,7 +304,7 @@ Helps to get current active components by keys.</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="getActiveComponentByKey"><span class="type-signature"></span>getActiveComponentByKey(key)</h4>
+    <h4 class="name" id=".lock"><span class="type-signature">&lt;static> </span>lock(id)</h4>
     
     
 </dt>
@@ -489,7 +312,8 @@ Helps to get current active components by keys.</p></div>
 
     
     <div class="description">
-        <p>Get component with provided key, if exists and is present in current state</p>
+        <p>Makes only components with provided ids list (or one id string) to emit UI events</p>
+<p><em>Note, that method rewrites current enabled ids list every call.</em></p>
     </div>
     
 
@@ -524,13 +348,16 @@ Helps to get current active components by keys.</p></div>
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">String</span>
+|
+
+<span class="param-type">Array.&lt;String></span>
 
 
 
@@ -541,167 +368,7 @@ Helps to get current active components by keys.</p></div>
 
             
 
-            <td class="description last"><p>Component key to get</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">ComponentClip</span>
-|
-
-<span class="param-type">Phaser.GameObjects.Image</span>
-|
-
-<span class="param-type">Phaser.GameObjects.TileSprite</span>
-|
-
-<span class="param-type">Phaser.GameObjects.Text</span>
-|
-
-<span class="param-type">null</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getStateConfigById"><span class="type-signature"></span>getStateConfigById(stateId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Get raw state config object by state id</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>stateId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>state id</p></td>
+            <td class="description last"><p>component's lock id, or Array of lock ids to be only enabled</p></td>
         </tr>
 
     
@@ -769,7 +436,7 @@ Helps to get current active components by keys.</p></div>
             
 <hr>
 <dt>
-    <h4 class="name" id="setState"><span class="type-signature"></span>setState(stateId, force)</h4>
+    <h4 class="name" id=".unlock"><span class="type-signature">&lt;static> </span>unlock()</h4>
     
     
 </dt>
@@ -777,7 +444,7 @@ Helps to get current active components by keys.</p></div>
 
     
     <div class="description">
-        <p>Setup state with provided stateId, if exists</p>
+        <p>Releases all components</p>
     </div>
     
 
@@ -786,80 +453,6 @@ Helps to get current active components by keys.</p></div>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>stateId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>state id to setup</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>force</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>if true, update state even if stateId was not changed</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     

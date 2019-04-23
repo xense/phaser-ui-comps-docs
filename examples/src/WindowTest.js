@@ -89,6 +89,13 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 			() => { window.open("https://github.com/xense/phaser-ui-comps", "_blank"); }
 		);
 
+		this.btnLock = new PhaserComps.UIComponents.UIButtonSelect(this, "btn_lock", "Lock everything but me");
+		this.btnLock.on(
+			PhaserComps.UIComponents.UIButton.EVENT_CLICK,
+			this.onBtnLock,
+			this
+		);
+		this.btnLock.lockId = "btn_lock";
 
 		// IMPORTANT! make doState after all child components created
 		this._firstTab.select = true;
@@ -147,5 +154,13 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 		button.destroy();
 		this.lastButtonY -= 40;
 		this.btnRemove.enable = this.testButtons.length > 0;
+	}
+
+	onBtnLock() {
+		if (this.btnLock.select) {
+			PhaserComps.UIManager.lock("btn_lock");
+		} else {
+			PhaserComps.UIManager.unlock();
+		}
 	}
 }
