@@ -107,54 +107,54 @@
 
 
     <section class="readme-section">
-        <article><h2>﻿Phaser 3 UI Components, built by Adobe Animate</h2><h3>What is it?</h3>
-Build your UI in <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a>, 
+        <article><h2>Phaser 3 UI Components, built by Adobe Animate</h2>
+<h3>What is it?</h3>
+Build your UI in [Abode Animate](https://www.adobe.com/ru/products/animate.html), 
 export to JSON and bitmaps with provided 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/jsfl/ExportToPhaser.jsfl">JSFL script</a> 
+[JSFL script](https://github.com/xense/phaser-ui-comps/blob/master/jsfl/ExportToPhaser.jsfl) 
 , and you can forget about lots of positioning magic numbers in your code.
-
-<code>ComponentClip</code> build itself with provided JSON and atlases, 
-and <code>UIComponentPrototype</code> Will help to control them, switch states, 
-listen to click, drag and other events.
-
-In addition, <code>UIComponentPrototype</code> and it's children classes don't mind, 
+<p><code>ComponentClip</code> build itself with provided JSON and atlases,
+and <code>UIComponentPrototype</code> Will help to control them, switch states,
+listen to click, drag and other events.</p>
+<p>In addition, <code>UIComponentPrototype</code> and it's children classes don't mind,
 if they have a real clip instance in current state or at all,
-so nothing bad happens, for example, if you remove some button instance in your window in 
-Animate document and keep it's <code>UIComponentPrototype</code> instance.
-
-All bitmaps are exported to png files with the same folder structure 
+so nothing bad happens, for example, if you remove some button instance in your window in
+Animate document and keep it's <code>UIComponentPrototype</code> instance.</p>
+<p>All bitmaps are exported to png files with the same folder structure
 as in the Animate document library. Pack them to atlases using
-<a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.
-
+<a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> or other tool you like.</p>
 <h3>Where and how to use?</h3>
-
 <p><a href="https://github.com/xense/phaser-ui-comps">Main framework repo</a></p>
 <p><a href="https://xense.github.io/phaser-ui-comps-docs">Docs, tutorials, examples</a></p>
 <p><a href="https://xense.github.io/phaser-ui-comps-docs/tutorial-showcase.html">Live example</a></p>
 <p><a href="https://github.com/xense/phaser-ui-comps/issues">Issues, bugs, new components ideas</a></p>
 <p><a href="https://github.com/xense/phaser-ui-comps-docs/raw/master/examples/xfl/UI.fla">Animate document example</a></p>
-<p><h4>Export Animate document</h4>
-To run JSFL script in Animate select <code>Commands &gt; Run Command</code>, 
-navigate to the script, and click Open.</p>
+<h4>Export Animate document</h4>
+To run JSFL script in Animate select `Commands > Run Command`, 
+navigate to the script, and click Open.
 <h3>How to install?</h3>
-
-<p>To install the latest version from 
+<p>To install the latest version from
 <a href="https://www.npmjs.com">npm</a>
 locally and save it in your <code>package.json</code> file:</p>
-<pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps </code></pre><p>Or you can download minified version from 
+<pre class="prettyprint source lang-bash"><code>npm install --save phaser-ui-comps 
+</code></pre>
+<p>Or you can download minified version from
 <a href="https://github.com/xense/phaser-ui-comps/tree/master/dist">https://github.com/xense/phaser-ui-comps/tree/master/dist</a></p>
 <p>Or use <a href="https://www.jsdelivr.com/">jsdelivr cdn</a> version</p>
-<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/phaser-ui-comps@0.1.2/dist/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><p><em>Note!</em>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/phaser-ui-comps@0.1.2/dist/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script>
+</code></pre>
+<p><em>Note!</em>
 <em>PhaserComps uses <a href="https://underscorejs.org/">underscore.js</a>
-There are two builds in the /dist folder, 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps-with-underscore.min.js">one</a> 
-with underscore included and 
-<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps.min.js">other</a> 
-without it, so you need to load it before loading PhaserComps</em> </p>
+There are two builds in the /dist folder,
+<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps-with-underscore.min.js">one</a>
+with underscore included and
+<a href="https://github.com/xense/phaser-ui-comps/blob/master/dist/phaser-ui-comps.min.js">other</a>
+without it, so you need to load it before loading PhaserComps</em></p>
 <h3>Simple usage</h3>
-
 <pre class="prettyprint source lang-html"><code>&lt;script src=&quot;path/to/scripts/phaser.js&quot;>&lt;/script>
-&lt;script src=&quot;path/to/scripts/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = &quot;comp-config&quot;;
+&lt;script src=&quot;path/to/scripts/phaser-ui-comps-with-underscore.min.js&quot;>&lt;/script>
+</code></pre>
+<pre class="prettyprint source lang-javascript"><code>const COMPONENT_CONFIG = &quot;comp-config&quot;;
 const TEXTURE_CONFIG = &quot;my_texture&quot;;
 
 
@@ -181,10 +181,11 @@ function create() {
         this.cache.json.get(COMPONENT_CONFIG), 
         [ TEXTURE_CONFIG ]
     );
-
+    
     let component = new PhaserComps.UIComponents.UIComponentPrototype();
     component.appendClip(clip);
-}</code></pre></article>
+}
+</code></pre></article>
     </section>
 
 
@@ -234,9 +235,9 @@ function create() {
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a>
 	
-		on 2019-04-23T12:04:25+03:00
+		on 2019-06-13T16:03:15+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

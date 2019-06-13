@@ -97,112 +97,116 @@
 </header>
 
 <article>
-    <h3>Using <a href="https://www.adobe.com/ru/products/animate.html">Abode Animate</a> 
-to build UI for <a href="http://phaser.io/">Phaser 3</a><h3>
-
-
+    <h3>Using [Abode Animate](https://www.adobe.com/ru/products/animate.html) 
+to build UI for [Phaser 3](http://phaser.io/)<h3>
 <h3>First steps</h3>
-
 <ul>
-<li><p>Create an Animate document of type <strong>HTML5 Canvas</strong> or <strong>ActionScript</strong>.</p>
+<li>
+<p>Create an Animate document of type <strong>HTML5 Canvas</strong> or <strong>ActionScript</strong>.</p>
 </li>
-<li><p>Create folder in the document library, where you will keep all your bitmaps.</p>
+<li>
+<p>Create folder in the document library, where you will keep all your bitmaps.</p>
 </li>
 </ul>
-<p>Later, when you export your UI, all images will be exported with same 
-paths as they were in the library, so you can easily get them to texture atlases.  </p>
-<p>Also, it will be useful to create subfolders in the bitmaps folder, 
+<p>Later, when you export your UI, all images will be exported with same
+paths as they were in the library, so you can easily get them to texture atlases.</p>
+<p>Also, it will be useful to create subfolders in the bitmaps folder,
 if you want to create some separate texture atlases</p>
 <ul>
 <li>Create your UI movieclip symbol and set <em>linkage name</em> to it, i.e. <code>my_window</code></li>
 </ul>
-<p>JSFL script exports all library items, that have linkage name 
+<p>JSFL script exports all library items, that have linkage name
 to JSON files with that name</p>
 <ul>
 <li>OK, now you are ready to build your UI components, windows and whatever.</li>
 </ul>
 <h3>Main rules</h3>
-
 <h4>Available types for export</h4>
-
 <ul>
 <li><strong><code>component</code></strong></li>
 </ul>
 <p>Component is a container, that will be exported to it's own <code>ComponentClip</code> instance.</p>
-<p>In Animate document, every <strong>movieclip</strong> instance is exported as <code>component</code>, except for instances, 
+<p>In Animate document, every <strong>movieclip</strong> instance is exported as <code>component</code>, except for instances,
 named as zones (<code>HIT_ZONE</code>, <code>DIMENSIONS</code>, or name with <code>DIMENSIONS_</code> prefix).</p>
 <p>Components can have children of any type, including other components.</p>
-<p>Components can have states. You can create several frames on movieclip timeline, 
-and create a layer with name <code>STATE_IDS</code>, this layer must have empty keyframes with names, 
-that will be exported as state names. </p>
+<p>Components can have states. You can create several frames on movieclip timeline,
+and create a layer with name <code>STATE_IDS</code>, this layer must have empty keyframes with names,
+that will be exported as state names.</p>
 <p>More about states further</p>
 <ul>
 <li><strong><code>image</code></strong></li>
 </ul>
 <p>Image bitmap will be exported as png.</p>
 <p>In <code>ComponentClip</code> it will be created as simple Phaser Image GameObject</p>
-<p>All bitmaps are exported to the same path, as in the document library. 
+<p>All bitmaps are exported to the same path, as in the document library.
 Use this to organize your bitmaps for packing to atlases.</p>
-<p><strong>It's important</strong> to save relative frames structure when creating atlases.  </p>
+<p><strong>It's important</strong> to save relative frames structure when creating atlases.</p>
 <ul>
 <li><strong><code>text</code></strong></li>
 </ul>
 <p>In <code>ComponentClip</code> will be created as Phaser Text GameObject</p>
-<p>Text properties that are exported: </p>
+<p>Text properties that are exported:</p>
 <ul>
-<li><ul>
+<li>
+<ul>
 <li>fontFamily</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>fontSize</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>color</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>bold</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>italic</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>text</li>
 </ul>
 </li>
-<li><ul>
+<li>
+<ul>
 <li>align</li>
 </ul>
 </li>
 </ul>
-<p>Also <strong>Shadow filter</strong> can be applied. 
+<p>Also <strong>Shadow filter</strong> can be applied.
 Note, that shadow strength is not applicable in phaser text, so set to 50% to see how it will nearly look.</p>
-<p><em>Also planning to use Glow Filter to export as text stroke later</em> </p>
+<p><em>Also planning to use Glow Filter to export as text stroke later</em></p>
 <ul>
 <li><strong><code>zone</code></strong></li>
 </ul>
-<p>Zones have two main purposes: Interaction and dimensions. </p>
+<p>Zones have two main purposes: Interaction and dimensions.</p>
 <p>Any <code>movieclip</code>, which instance is named as <code>HIT_ZONE</code>, <code>DIMENSIONS</code>, or name starts with <code>DIMENSIONS_</code>,
 will be exported as zone, and its inner content will not be parsed.</p>
-<p>For example UIButton clip must have a movieclip inside, named as <code>HIT_ZONE</code>. 
+<p>For example UIButton clip must have a movieclip inside, named as <code>HIT_ZONE</code>.
 It will be used as button interaction zone.</p>
-<p>And in UIScrollBar there must be a <code>DIMENSIONS</code> zone movieclip, it's bounds will represent scroll thumb drag bounds.  </p>
+<p>And in UIScrollBar there must be a <code>DIMENSIONS</code> zone movieclip, it's bounds will represent scroll thumb drag bounds.</p>
 <p>Zones can not be scaled between states. <code>scaleX</code> and <code>scaleY</code> are ignored, <code>width</code> and <code>height</code> used instead</p>
 <ul>
 <li><strong><code>polygon</code></strong></li>
 </ul>
 <p>Initially polygons was planned to be used only for masking, but you can also draw some primitives, if you want.</p>
-<p>In the document polygon is a simple shape. 
+<p>In the document polygon is a simple shape.
 It can have only line edges (no curves) and only solid-color fill.</p>
-<p>As far as animate shapes on each frame are different instances, 
+<p>As far as animate shapes on each frame are different instances,
 you cannot change instance params as position, scale and alpha among states.</p>
-<p>To use polygon as a mask, simply create a masking layer with a shape and place layers that should be masked, 
-under the mask layer. </p>
-<p><strong>Important!</strong> Masking works only in root component clip, as far as nested components are placed in containers, 
+<p>To use polygon as a mask, simply create a masking layer with a shape and place layers that should be masked,
+under the mask layer.</p>
+<p><strong>Important!</strong> Masking works only in root component clip, as far as nested components are placed in containers,
 and Phaser Containers do not support masking inside. But you can easily mask any container in the root.</p>
 <ul>
 <li><strong><code>tileSprite</code></strong></li>
@@ -211,30 +215,28 @@ and Phaser Containers do not support masking inside. But you can easily mask any
 Shape can be a <strong>rectangle only</strong>, and cannot be rotated. (You can rotate its container, if you need).</p>
 <p>Similar to the polygon, tileSprite can not be changed among states.</p>
 <h4>States</h4>
-
 <p>Switching component's states helps to show/hide it's children, change its' positions, rotation, scale and alpha.
-Also components and text fields can have instance-unique keys to get them via UIComponentPrototype, 
-and in different states keys may me applied to different instances, so when state is switched, new instances are 
-applied to UIComponentPrototype automatically. 
-Therefore, for example, you can create two different text fields in separate layers and give them one key. 
-In the UIComponentPrototype you can set text value for that key only once, and this value will be applied 
-to the current active textfield on evety state switching. Same is true for the child components. When state switches, 
+Also components and text fields can have instance-unique keys to get them via UIComponentPrototype,
+and in different states keys may me applied to different instances, so when state is switched, new instances are
+applied to UIComponentPrototype automatically.
+Therefore, for example, you can create two different text fields in separate layers and give them one key.
+In the UIComponentPrototype you can set text value for that key only once, and this value will be applied
+to the current active textfield on evety state switching. Same is true for the child components. When state switches,
 all child components reapply its' clips by key.</p>
 <h4>Layers and element instances</h4>
-
-<p>The main rule you need to follow is <strong>One instance - one layer</strong>. Before exporting, script scans layers. 
+<p>The main rule you need to follow is <strong>One instance - one layer</strong>. Before exporting, script scans layers.
 If some layer contains more than one element, it will be ignored, and a warning will be shown in Animate console.</p>
 <p>First reason of this rule is that element may change its common params (position, scale, rotation and alpha)
-within keyframes (states). So for one layer only one element will be created, 
+within keyframes (states). So for one layer only one element will be created,
 and state configs will keep only common params for them.</p>
-<p>Well, if you component needs states, its movieclip must have a layer with name <code>STATE_IDS</code>. 
-Layer must have an empty keyframe at each movieclip timeline frame. Give a name for each keyframe on this layer, 
+<p>Well, if you component needs states, its movieclip must have a layer with name <code>STATE_IDS</code>.
+Layer must have an empty keyframe at each movieclip timeline frame. Give a name for each keyframe on this layer,
 this will be state ids. Take care of them to be unique inside a clip.</p>
-<p>On other layers you can create keyframes to change elements' common params. 
+<p>On other layers you can create keyframes to change elements' common params.
 If you need to hide an element in current state - just remove it from the current keyframe.</p>
-<p><h4>Hope that helps</h4>
+<h4>Hope that helps</h4>
 If you still have questions about building components in Animate or any ideas to add to this doc, 
-feel free to write me <a href="mailto:&#x61;&#110;&#116;&#111;&#110;&#x2e;&#98;&#x79;&#115;&#116;&#114;&#x6f;&#x76;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#x61;&#110;&#116;&#111;&#110;&#x2e;&#98;&#x79;&#115;&#116;&#114;&#x6f;&#x76;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a>. </p>
+feel free to write me <anton.bystrov@gmail.com>.
 </article>
 
 </section>
@@ -276,9 +278,9 @@ feel free to write me <a href="mailto:&#x61;&#110;&#116;&#111;&#110;&#x2e;&#98;&
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a>
 	
-		on 2019-04-23T12:04:26+03:00
+		on 2019-06-13T16:03:16+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

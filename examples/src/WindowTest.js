@@ -128,11 +128,11 @@ export default class WindowTest extends PhaserComps.UIComponents.UIComponentProt
 	}
 
 	onButtonAdd() {
-		let buttonClip = this._scene.add.ui_component(
+		let buttonClip = this._scene.make.ui_component(
 			window.game.cache.json.get('button_config'),
 			['window_atlas']
 		);
-		buttonClip.groupY = this.lastButtonY;
+		buttonClip.y = this.lastButtonY;
 		this.lastButtonY += 40;
 
 		let button = new PhaserComps.UIComponents.UIButton();

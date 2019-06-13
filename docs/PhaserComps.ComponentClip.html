@@ -97,21 +97,6 @@
         ComponentClip
         </h2>
         
-            <div class="class-description"><p>Component clip is a group of Phaser GameObjects and child ComponentClips.
-Builds itself with provided jsfl-generated config object.</p>
-<p>The root clip, built with provided config, keeps array of built components, images and other stuff inside.
-In some cases it behaves like a group, but it's not really.
-All child ComponentClips, created inside, are settled in Phaser Containers, but the root is not.
-That was done firstly for the masks to work property. So if you need some masks in your component,
-they should be only in the root, because containers don't support masking inside.
-But the root mask can mask any child containers. Currently only shape masks are supported,
-see docs for more info.</p>
-<p>Clip supports state switching. Best if controlled by
-<a href="PhaserComps.UIComponents.UIComponentPrototype.html"><code>UIComponentPrototype</code></a> instance</p>
-<p><em>Note! do not change <code>x</code>, <code>y</code>, <code>scaleX</code>, <code>scaleY</code>, <code>angle</code>, <code>alpha</code>, <code>visible</code> properties of clip instance.</em></p>
-<p><em>If you need to move, scale, rotate, change alpha and visibility of the clip group, use</em>
-<em><code>groupX</code>, <code>groupY</code>, <code>groupScaleX</code>, <code>groupScaleY</code>, <code>groupAngle</code>, <code>groupAlpha</code>, <code>groupVisible</code> properties</em></p></div>
-        
     
 </header>
 
@@ -122,7 +107,7 @@ see docs for more info.</p>
         
 <hr>
 <dt>
-    <h4 class="name" id="ComponentClip"><span class="type-signature"></span>new ComponentClip(scene, config, textures [, isChildComponent])</h4>
+    <h4 class="name" id="ComponentClip"><span class="type-signature"></span>new ComponentClip(scene, config, textures)</h4>
     
     
 </dt>
@@ -149,11 +134,7 @@ see docs for more info.</p>
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
-        
-        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -179,19 +160,7 @@ see docs for more info.</p>
             </td>
 
             
-                <td class="attributes">
-                
 
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>Phaser scene to create component at</p></td>
@@ -215,19 +184,7 @@ see docs for more info.</p>
             </td>
 
             
-                <td class="attributes">
-                
 
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>jsfl-generated config object</p></td>
@@ -251,62 +208,10 @@ see docs for more info.</p>
             </td>
 
             
-                <td class="attributes">
-                
 
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>Array of texture names, where component should find its texture frames</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isChildComponent</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"><p>used internally to build child component clips recursively</p></td>
         </tr>
 
     
@@ -317,545 +222,6 @@ see docs for more info.</p>
 
     
 <dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>groupX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group position x</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group position x</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupAlpha</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    1
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group alpha</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupScaleX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    1
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group scaleX</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupScaleY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    1
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group scaleY</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupAngle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    0
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group angle in degrees.
-Note, that every group child will be rotated around its own origin</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>groupVisible</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    true
-                
-                </td>
-            
-
-            <td class="description last"><p>clip group visibility flag</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to move clip manually, use <code>groupX</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to move clip manually, use <code>groupY</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>scaleX</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to scale clip manually, use <code>groupScaleX</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>scaleY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to scale clip manually, use <code>groupScaleY</code></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>alpha</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to change clip alpha manually, use <code>groupAlpha</code>.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>angle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to rotate clip manually, use <code>groupAngle</code>.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>visible</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p><strong>only for private usage</strong>, if you want to switch clip visibility manually,
-use <code>groupVisible</code></p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
     
 
 	
@@ -920,6 +286,17 @@ use <code>groupVisible</code></p></td>
     </div>
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>Phaser.GameObjects.Container</li>
+    </ul>
+
+
+    
 
     
 
@@ -948,7 +325,7 @@ use <code>groupVisible</code></p></td>
             
 <hr>
 <dt>
-    <h4 class="name" id="applyChildParamsapplyChildParams"><span class="type-signature"></span>applyChildParamsapplyChildParams(childId, params)</h4>
+    <h4 class="name" id="applyChildParams"><span class="type-signature"></span>applyChildParams(childId, params)</h4>
     
     
 </dt>
@@ -3042,9 +2419,9 @@ Only for <code>polygon</code> type</p></td>
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a>
 	
-		on 2019-04-23T12:04:26+03:00
+		on 2019-06-13T16:03:16+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
