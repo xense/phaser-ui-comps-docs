@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Phaser 3 UI Components Class: UIProgressBar</title>
+	<title>Phaser 3 UI Components Class: UIList</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,7 +86,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UIProgressBar</h1>
+	<h1 class="page-title">Class: UIList</h1>
 <section>
 
 <header>
@@ -94,19 +94,12 @@
         <h2>
             <span class="ancestors"><a href="PhaserComps.html">PhaserComps</a><a href="PhaserComps.UIComponents.html">.UIComponents</a>.</span>
         
-        UIProgressBar
+        UIList
         </h2>
         
-            <div class="class-description"><p>Progress bar.</p>
-<p>Setup states <code>progress_0</code> and <code>progress_100</code> in Animate,
-and all differences between them will be interpolated to the current progress value.
-Also you can create intermediate states, if you want to control intermediate interpolation behaviour.
-For example, if you want an indicator to rotate a full circle, you need to create additional
-intermediate states <code>progress_30</code> and <code>progress_70</code> with 30% and 70$ of rotation,
-to be sure, that indicator will rotate in the needed direction.</p>
-<p>Also you can use intermediate states to make interpolation not linear for all progress range.</p>
-<p>Available properties for interpolating are
-<code>x</code>, <code>y</code>, <code>scaleX</code>, <code>scaleY</code>, <code>angle</code>, <code>alpha</code></p></div>
+            <div class="class-description"><p>List component. Item clip instances are supposed to exist as it's children, with keys <code>item_0</code>, <code>item_1</code> and so on.</p>
+<p>When data array applied, every array item is applied to its' view instance</p>
+<p>Useful for short lists, and for lists with custom items layout.</p></div>
         
     
 </header>
@@ -118,7 +111,7 @@ to be sure, that indicator will rotate in the needed direction.</p>
         
 <hr>
 <dt>
-    <h4 class="name" id="UIProgressBar"><span class="type-signature"></span>new UIProgressBar( [parent] [, key])</h4>
+    <h4 class="name" id="UIList"><span class="type-signature"></span>new UIList( [parent] [, key], rendererClass)</h4>
     
     
 </dt>
@@ -224,6 +217,38 @@ to be sure, that indicator will rotate in the needed direction.</p>
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>rendererClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Class</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>class for items, best if extending <code>UIListBaseItem</code></p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -259,13 +284,13 @@ to be sure, that indicator will rotate in the needed direction.</p>
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Array.&lt;*></span>
 
 
 
@@ -276,7 +301,7 @@ to be sure, that indicator will rotate in the needed direction.</p>
 
             
 
-            <td class="description last"><p>current progress value, between 0 and 1</p></td>
+            <td class="description last"><p>any data array to apply to list items</p></td>
         </tr>
 
     
@@ -325,6 +350,11 @@ to be sure, that indicator will rotate in the needed direction.</p>
     
 
     
+    <h5>Fires:</h5>
+    <ul>
+        <li><a href="PhaserComps.UIComponents.UIList.html#.event:EVENT_ITEM_CHANGE">PhaserComps.UIComponents.UIList.event:EVENT_ITEM_CHANGE</a></li>
+    </ul>
+    
 
     
 
@@ -339,17 +369,6 @@ to be sure, that indicator will rotate in the needed direction.</p>
 
     
     </div>
-
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="PhaserComps.UIComponents.UIComponentPrototype.html">PhaserComps.UIComponents.UIComponentPrototype</a></li>
-    </ul>
-
 
     
 
@@ -370,7 +389,7 @@ to be sure, that indicator will rotate in the needed direction.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="appendClip"><span class="type-signature"></span>appendClip(clip)</h4>
+    <h4 class="name" id="clean"><span class="type-signature"></span>clean()</h4>
     
     
 </dt>
@@ -378,8 +397,7 @@ to be sure, that indicator will rotate in the needed direction.</p>
 
     
     <div class="description">
-        <p>Append a instance to this to control it. State setup will be processed immediately.<br>
-Use only for root instance, child instances will be appended automatically depending on state of this.</p>
+        <p>Destroy all items renderer instances</p>
     </div>
     
 
@@ -388,56 +406,6 @@ Use only for root instance, child instances will be appended automatically depen
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>clip</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>ComponentView instance to append</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -448,15 +416,6 @@ Use only for root instance, child instances will be appended automatically depen
 
 	
 
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#appendClip">PhaserComps.UIComponents.UIComponentPrototype#appendClip</a>
-			</li>
-		</ul>
-	</dd>
 	
 
     
@@ -515,10 +474,6 @@ Use only for root instance, child instances will be appended automatically depen
 <dd>
 
     
-    <div class="description">
-        <p>Destroy ComponentPrototype and clip, if exists</p>
-    </div>
-    
 
     
 
@@ -535,15 +490,6 @@ Use only for root instance, child instances will be appended automatically depen
 
 	
 
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#destroy">PhaserComps.UIComponents.UIComponentPrototype#destroy</a>
-			</li>
-		</ul>
-	</dd>
 	
 
     
@@ -595,16 +541,12 @@ Use only for root instance, child instances will be appended automatically depen
             
 <hr>
 <dt>
-    <h4 class="name" id="doState"><span class="type-signature">&lt;protected> </span>doState()</h4>
+    <h4 class="name" id="getStateId"><span class="type-signature"></span>getStateId()</h4>
     
     
 </dt>
 <dd>
 
-    
-    <div class="description">
-        <p>Call doState to setup new state, id is provided by <a href="PhaserComps.UIComponents.UIComponentPrototype.html#getStateId"><code>getStateId</code></a></p>
-    </div>
     
 
     
@@ -622,109 +564,6 @@ Use only for root instance, child instances will be appended automatically depen
 
 	
 
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#doState">PhaserComps.UIComponents.UIComponentPrototype#doState</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li><a href="PhaserComps.UIComponents.UIProgressBar.html#getStateId">#getStateId</a></li>
-			</ul>
-	</dd>
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getStateId"><span class="type-signature">&lt;protected> </span>getStateId()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Current state id, used by <a href="PhaserComps.UIComponents.UIComponentPrototype.html#doState"><code>doState</code></a> method</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#getStateId">PhaserComps.UIComponents.UIComponentPrototype#getStateId</a>
-			</li>
-		</ul>
-	</dd>
 	
 
     
@@ -792,11 +631,19 @@ Use only for root instance, child instances will be appended automatically depen
     
 </dd>
 
-        
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
             
 <hr>
 <dt>
-    <h4 class="name" id="getText"><span class="type-signature"></span>getText(key)</h4>
+    <h4 class="name" id=".event:EVENT_ITEM_CHANGE">EVENT_ITEM_CHANGE</h4>
     
     
 </dt>
@@ -804,7 +651,7 @@ Use only for root instance, child instances will be appended automatically depen
 
     
     <div class="description">
-        <p>Returns saved text by key, if it was set previously</p>
+        <p>Emitted when any item emits such even.</p>
     </div>
     
 
@@ -839,13 +686,13 @@ Use only for root instance, child instances will be appended automatically depen
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>item</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type"><a href="PhaserComps.UIComponents.UIListBaseItem.html">PhaserComps.UIComponents.UIListBaseItem</a></span>
 
 
 
@@ -856,7 +703,7 @@ Use only for root instance, child instances will be appended automatically depen
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>item instance, that emitted change event</p></td>
         </tr>
 
     
@@ -873,646 +720,6 @@ Use only for root instance, child instances will be appended automatically depen
 
 	
 
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#getText">PhaserComps.UIComponents.UIComponentPrototype#getText</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>text value</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-|
-
-<span class="param-type">Array.&lt;String></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onClipAppend"><span class="type-signature">&lt;protected> </span>onClipAppend(clip)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Override this, if you want to do something, when new clip removed,</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>clip</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="PhaserComps.ComponentClip.html">PhaserComps.ComponentClip</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipAppend">PhaserComps.UIComponents.UIComponentPrototype#onClipAppend</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onClipProcess"><span class="type-signature">&lt;protected> </span>onClipProcess()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Override this, if you want to do something, when state or clip changes.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipProcess">PhaserComps.UIComponents.UIComponentPrototype#onClipProcess</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="onClipRemove"><span class="type-signature">&lt;protected> </span>onClipRemove(clip)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Override this, if you want to do something, when new clip removed,
-like remove clip events listeners.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>clip</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#onClipRemove">PhaserComps.UIComponents.UIComponentPrototype#onClipRemove</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="removeClip"><span class="type-signature">&lt;protected> </span>removeClip()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#removeClip">PhaserComps.UIComponents.UIComponentPrototype#removeClip</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setText"><span class="type-signature"></span>setText(key, text)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Set text value to the textfield with provided key.
-Text value is saved in the component's instance dictionary and will be set to the textField on every state change</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>TextField key</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>text</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-|
-
-<span class="param-type">Array.&lt;String></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>text string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="PhaserComps.UIComponents.UIComponentPrototype.html#setText">PhaserComps.UIComponents.UIComponentPrototype#setText</a>
-			</li>
-		</ul>
-	</dd>
 	
 
     
@@ -1561,10 +768,6 @@ Text value is saved in the component's instance dictionary and will be set to th
 </dd>
 
         </dl>
-    
-
-    
-
     
 </article>
 
@@ -1616,7 +819,7 @@ Text value is saved in the component's instance dictionary and will be set to th
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a>
 	
-		on 2019-06-27T15:14:05+03:00
+		on 2019-06-27T15:14:06+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

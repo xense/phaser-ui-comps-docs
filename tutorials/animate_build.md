@@ -70,7 +70,10 @@ Text properties that are exported:
 Also **Shadow filter** can be applied. 
 Note, that shadow strength is not applicable in phaser text, so set to 50% to see how it will nearly look.
 
-*Also planning to use Glow Filter to export as text stroke later* 
+**Glow Filter** can be used as text stroke. Note, that blurX parameter is used as stroke thickness. 
+So in Animate set glow strength to 1000%, to see how stroke will nearly look. 
+
+
 
 
 * **`zone`**
